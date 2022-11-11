@@ -1,0 +1,1 @@
+taskthink.adb:27:07: warning: variable "NewRandomDirection" is never read and never assigned [-gnatwv]
