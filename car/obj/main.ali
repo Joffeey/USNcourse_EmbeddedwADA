@@ -32,6 +32,7 @@ D a-stuten.ads		20220915114510 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
+D drivingstates.ads	20221115115826 697f963b drivingstates%s
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -41,9 +42,9 @@ D interfac.ads		20220915114508 edec285f interfaces%s
 D main.adb		20221107093246 a0771570 main%b
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
-D mybrain.ads		20221110122352 c835b0c6 mybrain%s
+D mybrain.ads		20221115114238 c835b0c6 mybrain%s
 D mycontroller.ads	20221107093246 15e509c9 mycontroller%s
-D mymotordriver.ads	20221107142410 9eb2add3 mymotordriver%s
+D mymotordriver.ads	20221115114232 137dd968 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -93,30 +94,30 @@ D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
-D taskact.ads		20221107093246 f71d453c taskact%s
-D tasksense.ads		20221107093246 0d59586f tasksense%s
-D taskthink.ads		20221107093246 1b7c08fe taskthink%s
+D taskact.ads		20221114150734 0e4befaa taskact%s
+D tasksense.ads		20221114144532 088d33ec tasksense%s
+D taskthink.ads		20221114150734 16e14689 taskthink%s
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 12 11 none]
-X 14 hal-gpio.ads
+X 15 hal-gpio.ads
 47h9*GPIO_Point
-X 15 hal-i2c.ads
+X 16 hal-i2c.ads
 48h9*I2C_Port
-X 16 hal-spi.ads
+X 17 hal-spi.ads
 48h9*SPI_Port
-X 17 hal-uart.ads
+X 18 hal-uart.ads
 48h9*UART_Port
-X 19 main.adb
+X 20 main.adb
 12U11*Main 12b11 20l5 20t9
-X 23 mycontroller.ads
-5K9*MyController 19|1w6 23|9e17
-X 52 s-interr.ads
+X 24 mycontroller.ads
+5K9*MyController 20|1w6 24|9e17
+X 53 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 60 s-secsta.ads
+X 61 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 68 s-taskin.ads
-398V13*Get_Sec_Stack{60|46P9} 399i<c,__gnat_get_secondary_stack>22
-X 71 s-tarest.ads
+X 69 s-taskin.ads
+398V13*Get_Sec_Stack{61|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 72 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
 

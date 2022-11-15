@@ -8,6 +8,7 @@ C:\Users\Andreas\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\microbi
 [BOUND OBJECT FILES]
 C:\Ada\car\obj\mybrain.o
 C:\Ada\car\obj\mymotordriver.o
+C:\Ada\car\obj\drivingstates.o
 C:\Ada\car\obj\randomdirection.o
 C:\Ada\car\obj\taskact.o
 C:\Ada\car\obj\taskthink.o

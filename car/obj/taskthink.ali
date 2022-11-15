@@ -11,20 +11,17 @@ P DB LC TF  SS ZX
 
 RN
 RV NO_DELAY
-RV NO_DIRECT_BOOLEAN_OPERATORS
-RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
 RV STATIC_PRIORITIES
 RV NO_DEFAULT_INITIALIZATION
-RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U taskthink%b		taskthink.adb		bd406868 OO PK
+U taskthink%b		taskthink.adb		a80e7e25 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
@@ -32,16 +29,16 @@ W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z drivingstates%s	drivingstates.adb	drivingstates.ali  AD
 Z mybrain%s		mybrain.adb		mybrain.ali  AD
 Z mymotordriver%s	mymotordriver.adb	mymotordriver.ali  AD
 W randomdirection%s	randomdirection.adb	randomdirection.ali
-W system%s		system.ads		system.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
-Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
-U taskthink%s		taskthink.ads		4dfb15eb EE OO PK
+U taskthink%s		taskthink.ads		a4d6b91c EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W drivingstates%s	drivingstates.adb	drivingstates.ali
 W mybrain%s		mybrain.adb		mybrain.ali
 W mymotordriver%s	mymotordriver.adb	mymotordriver.ali
 Z system%s		system.ads		system.ali
@@ -70,6 +67,7 @@ D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-textio.ads		20220915114508 ffc84532 ada.text_io%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
+D drivingstates.ads	20221115115826 697f963b drivingstates%s
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -78,8 +76,8 @@ D hal-uart.ads		20220915114714 d58316b4 hal.uart%s
 D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
-D mybrain.ads		20221110122352 c835b0c6 mybrain%s
-D mymotordriver.ads	20221107142410 9eb2add3 mymotordriver%s
+D mybrain.ads		20221115114238 c835b0c6 mybrain%s
+D mymotordriver.ads	20221115114232 137dd968 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -94,7 +92,7 @@ D nrf_svd-spi.ads	20220915114712 6e2ffb69 nrf_svd.spi%s
 D nrf_svd-timer.ads	20220915114712 ba50db1c nrf_svd.timer%s
 D nrf_svd-twi.ads	20220915114712 68301534 nrf_svd.twi%s
 D nrf_svd-uart.ads	20220915114712 83bcebc8 nrf_svd.uart%s
-D randomdirection.ads	20221110122928 8879573d randomdirection%s
+D randomdirection.ads	20221114095326 8879573d randomdirection%s
 D system.ads		20220915114514 ad54c63c system%s
 D s-bb.ads		20220915114508 09e072ae system.bb%s
 D s-bbbopa.ads		20220915114514 f68efaf0 system.bb.board_parameters%s
@@ -109,9 +107,7 @@ D s-bbtime.ads		20220915114514 ad086247 system.bb.time%s
 D s-finmas.ads		20220915114512 1ab4dba8 system.finalization_masters%s
 D s-finroo.ads		20220915114512 4ff27390 system.finalization_root%s
 D s-imagei.ads		20220915114508 0d3f86a7 system.image_i%s
-D s-imageu.ads		20220915114508 525c30c6 system.image_u%s
 D s-imgint.ads		20220915114508 bdb6f5ec system.img_int%s
-D s-imguns.ads		20220915114508 0e4da2ac system.img_uns%s
 D s-interr.ads		20220915114514 d74bd991 system.interrupts%s
 D s-multip.ads		20220915114514 f33e0e35 system.multiprocessors%s
 D s-mufalo.ads		20220915114514 3dca0374 system.multiprocessors.fair_locks%s
@@ -121,8 +117,6 @@ D s-parame.ads		20220915114514 8e90778f system.parameters%s
 D s-pooglo.ads		20220915114512 ede33ef8 system.pool_global%s
 D s-putima.ads		20220915114512 4e095881 system.put_images%s
 D s-rannum.ads		20220915114512 c3978523 system.random_numbers%s
-D s-rannum.adb		20220915114512 2631917b system.random_numbers%b
-D s-ransee.ads		20220915114512 01a57b33 system.random_seed%s
 D s-secsta.ads		20220915114508 56a2861c system.secondary_stack%s
 D s-stalib.ads		20220915114512 472fbca8 system.standard_library%s
 D s-stoele.ads		20220915114508 2dc34a04 system.storage_elements%s
@@ -137,107 +131,102 @@ D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
-D s-valuns.ads		20220915114510 dac7b45d system.val_uns%s
-D s-valueu.ads		20220915114510 7b8fccf5 system.value_u%s
-D taskthink.ads		20221107093246 1b7c08fe taskthink%s
-D taskthink.adb		20221110142644 47e0894d taskthink%b
+D taskthink.ads		20221114150734 16e14689 taskthink%s
+D taskthink.adb		20221115115804 5f33d177 taskthink%b
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
-G c b b b [b taskthink 6 1 none]
-G c Z s b [thinkTK taskthink 6 9 none]
-G c Z s s [thinkTKVIP taskthink 6 4 none]
-G r p none [b taskthink 6 1 none] [getmeasurementsensor1 mybrain__brain 4 16 none]
-G r p none [b taskthink 6 1 none] [getmeasurementsensor2 mybrain__brain 5 16 none]
-G r p none [b taskthink 6 1 none] [getmeasurementsensor3 mybrain__brain 6 16 none]
-G r p none [b taskthink 6 1 none] [setdirection mymotordriver__motordriver 46 17 none]
-G r p none [thinkTK taskthink 6 9 none] [getmeasurementsensor1 mybrain__brain 4 16 none]
-G r p none [thinkTK taskthink 6 9 none] [getmeasurementsensor2 mybrain__brain 5 16 none]
-G r p none [thinkTK taskthink 6 9 none] [getmeasurementsensor3 mybrain__brain 6 16 none]
-G r p none [thinkTK taskthink 6 9 none] [setdirection mymotordriver__motordriver 46 17 none]
+G c b b b [b taskthink 7 1 none]
+G c Z s b [thinkTK taskthink 7 9 none]
+G c Z s s [thinkTKVIP taskthink 7 4 none]
+G r p none [b taskthink 7 1 none] [getmeasurementsensor1 mybrain__brain 5 16 none]
+G r p none [b taskthink 7 1 none] [getmeasurementsensor2 mybrain__brain 6 16 none]
+G r p none [b taskthink 7 1 none] [getmeasurementsensor3 mybrain__brain 7 16 none]
+G r p none [b taskthink 7 1 none] [canmoveforward drivingstates__states 9 16 none]
+G r p none [b taskthink 7 1 none] [canrotleft drivingstates__states 10 16 none]
+G r p none [b taskthink 7 1 none] [canrotright drivingstates__states 11 16 none]
+G r p none [b taskthink 7 1 none] [setstate drivingstates__states 13 16 none]
+G r p none [b taskthink 7 1 none] [setdirection mymotordriver__motordriver 46 17 none]
+G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor1 mybrain__brain 5 16 none]
+G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor2 mybrain__brain 6 16 none]
+G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor3 mybrain__brain 7 16 none]
+G r p none [thinkTK taskthink 7 9 none] [canmoveforward drivingstates__states 9 16 none]
+G r p none [thinkTK taskthink 7 9 none] [canrotleft drivingstates__states 10 16 none]
+G r p none [thinkTK taskthink 7 9 none] [canrotright drivingstates__states 11 16 none]
+G r p none [thinkTK taskthink 7 9 none] [setstate drivingstates__states 13 16 none]
+G r p none [thinkTK taskthink 7 9 none] [setdirection mymotordriver__motordriver 46 17 none]
 X 1 ada.ads
-16K9*Ada 20e8 89|1r6 1r25 3r6 4r6 4r23 11r35
+16K9*Ada 20e8 84|1r6 1r25 3r6 4r6 4r23
 X 6 a-numeri.ads
-16K13*Numerics 35e17 89|3r10 11r39
+16K13*Numerics 35e17 84|3r10
 X 7 a-nudira.ads
-44k22*Discrete_Random 81e33 89|3w19 11r48
-50R9 Generator<69|65R9> 89|25r13[11]
-52V13 Random{89|10I12} 89|39s24[11]
-61U14 Reset<69|103p14> 89|38s10[11]
-X 8 a-nudira.adb
-53V16 Random[69|86]{89|10I12} 70|402b13[89|11]
-65V16 Random[69|86]{89|10I12} 70|402b13[89|11]
+44k22*Discrete_Random 81e33 84|3w19
 X 9 a-reatim.ads
-40K13*Real_Time 181e18 89|1w10 1r29
-50M9*Time<54|46M9> 89|16r17
-60I9*Time_Span<54|81I9>
-67V13*Clock{50M9}<54|134p13> 89|45s21 60s27 72s27
-71V14*"+"{50M9} 89|62s36 74s36 97s30
-127V13*Milliseconds{60I9} 89|62s38 74s38 97s32
+40K13*Real_Time 181e18 84|1w10 1r29
+50M9*Time<55|46M9> 84|17r17
+60I9*Time_Span<55|81I9>
+67V13*Clock{50M9}<55|134p13> 84|41s21
+71V14*"+"{50M9} 84|65s30
+127V13*Milliseconds{60I9} 84|65s32
 X 17 a-textio.ads
-36K13*Text_IO 52e16 89|4w10 4r27
-46U14*Put_Line 89|41s10
-X 20 hal-gpio.ads
+36K13*Text_IO 52e16 84|4w10 4r27
+46U14*Put_Line 84|54s10
+X 19 drivingstates.ads
+4K9*DrivingStates 18e18 83|3w6 3r25
+5E9*DrivState 5e61 84|25r22
+5n23*Stopping{5E9} 84|25r35 61r18
+5n33*DriveForward{5E9} 84|57r18
+5n47*Rleft{5E9} 84|58r18
+5n54*Rright{5E9} 84|59r18
+7w14*States 84|47r24 48r21 49r22 52r26
+9V16 CanMoveForward{boolean} 84|47s31
+10V16 CanRotLeft{boolean} 84|48s28
+11V16 CanRotRight{boolean} 84|49s29
+13V16 SetState{5E9} 84|52s33
+X 21 hal-gpio.ads
 47h9*GPIO_Point
-X 21 hal-i2c.ads
+X 22 hal-i2c.ads
 48h9*I2C_Port
-X 22 hal-spi.ads
+X 23 hal-spi.ads
 48h9*SPI_Port
-X 23 hal-uart.ads
+X 24 hal-uart.ads
 48h9*UART_Port
-X 24 interfac.ads
-79M9*Unsigned_32
-82M9*Unsigned_64
-X 27 mybrain.ads
-1K9*MyBrain 18e12 88|2w6 2r19
-3w14*Brain 89|46r23 47r22 48r23 59r29 71r29
-4V16 GetMeasurementSensor1{integer} 89|46s29 59s35 71s35
-5V16 GetMeasurementSensor2{integer} 89|47s28
-6V16 GetMeasurementSensor3{integer} 89|48s29
-X 28 mymotordriver.ads
-4K9*MyMotorDriver 52e18 88|1w6 1r25
-6E9*Directions 6e73 89|27r28
-6n24*Forward{6E9} 89|52r39
-6n33*Stop{6E9} 89|55r39 67r39 92r39
-6n39*RotateRight{6E9} 89|58r42
-6n52*RotateLeft{6E9} 89|70r42
-40w14*MotorDriver 89|52r13 55r13 58r16 67r13 70r16 92r13
-46U17 SetDirection 89|52s25 55s25 58s28 67s25 70s28 92s25
-X 43 randomdirection.ads
-3K9*RandomDirection 8e20 89|2w6 2r27
-5I9*Choice<short_short_integer> 89|10r30
-X 54 s-bbtime.ads
+X 28 mybrain.ads
+1K9*MyBrain 19e12 83|2w6 2r19
+3w14*Brain 84|42r23 43r22 44r23
+5V16 GetMeasurementSensor1{integer} 84|42s29
+6V16 GetMeasurementSensor2{integer} 84|43s28
+7V16 GetMeasurementSensor3{integer} 84|44s29
+X 29 mymotordriver.ads
+4K9*MyMotorDriver 52e18 83|1w6 1r25
+6n24*Forward{6E9} 84|57r60
+6n33*Stop{6E9} 84|61r56
+6n39*RotateRight{6E9} 84|59r54
+6n52*RotateLeft{6E9} 84|58r53
+40w14*MotorDriver 84|57r34 58r27 59r28 61r30
+46U17 SetDirection 84|57s46 58s39 59s40 61s42
+X 44 randomdirection.ads
+3K9*RandomDirection 9e20 84|2w6 2r27
+X 55 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
-X 61 s-interr.ads
+X 60 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 69 s-rannum.ads
-77V13*Random{24|79M9} 70|224i21
-78V13*Random{24|82M9} 70|224i21
-X 72 s-secsta.ads
+X 69 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 80 s-taskin.ads
-398V13*Get_Sec_Stack{72|46P9} 399i<c,__gnat_get_secondary_stack>22
-X 83 s-tarest.ads
+X 77 s-taskin.ads
+398V13*Get_Sec_Stack{69|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 80 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
-X 88 taskthink.ads
-4K9*TaskThink 8l5 8e14 89|6b14 103l5 103t14
-6t9*Think 89|8b14 100l8 100t13
-X 89 taskthink.adb
-10I12 RandChoice<43|5I9> 11r64 14r42 26r20
-11K15 RandomChoice[7|44] 12r11
-13I12 Index<short_short_integer> 14r32 29r11 37r16
-14A12 ChoiceArr(10I12)<13I12> 28r25
-16m7 myClock{9|50M9} 45m10 60m16 62r28 72m16 74r28 97r22
-18i7 FrontSens{integer} 46m10 51r13 54r16 57r19 59m16 66r16 69r19 71m16
-19i7 LeftSens{integer} 47m10 54r48 66r48
-20i7 RightSens{integer} 48m10 54r59 66r59
-21i7 FrontMinDis{integer} 34m7 51r25 54r28 66r28
-22i7 MinDis{integer} 35m7 57r31 69r31
-23b7 IsRotating{boolean} 33m7 51r45 56m13 64m13 68m13 76m13
-25r7 gen{7|50R9[11]} 38r16 39r31
-26i7 tempChoice{10I12} 39m10 40r32 41r19
-27e7 NewRandomDirection{28|6E9}
-28a7 DirectionsArray{14A12} 40m10
-29i7 i{13I12}
-37i11 I{13I12} 40r26
+X 83 taskthink.ads
+5K9*TaskThink 9l5 9e14 84|7b14 71l5 71t14
+7t9*Think 84|9b14 68l8 68t13
+X 84 taskthink.adb
+17m7 myClock{9|50M9} 41m10 65r22
+19i7 FrontSens{integer} 42m10 47r60 48r74 49r76 54r19
+20i7 LeftSens{integer} 43m10 48r53 49r55
+21i7 RightSens{integer} 44m10 48r63 49r65
+25e7 CurrentState{19|5E9} 47r46 48r39 49r41 52m10 56r15
+26b7 CanForward{boolean} 47m10 52r42
+27b7 CanLeft{boolean} 48m10 52r54
+28b7 CanRight{boolean} 49m10 52r63
 

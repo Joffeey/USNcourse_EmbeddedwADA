@@ -129,6 +129,22 @@ package body TaskAct is
             Instruction.RightBackSpeed := RightSpeed;
             Instruction.RightBackPin1 := False;
             Instruction.RightBackPin2 := not Instruction.RightBackPin1;
+            
+         when TurnRight =>
+            Instruction.LeftFrontSpeed := LeftSpeed; -- speed is dutycycle between 0 and 100% => so a value between 0 and 1023
+            Instruction.LeftFrontPin1 := True;
+            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1; -- the second pin is always the opposite of the first!
+            Instruction.LeftBackSpeed := LeftSpeed;  
+            Instruction.LeftBackPin1 := True;
+            Instruction.LeftBackPin2 := not Instruction.LeftBackPin1;
+           
+            Instruction.RightFrontSpeed := RightSpeed/2; -- the speed of right front wheel is equal to the left front wheel. For traditional steering (eg turn left) the speed of left wheel is slower than right wheel 
+            Instruction.RightFrontPin1 := True;
+            Instruction.RightFrontPin2 := not Instruction.RightFrontPin1; 
+            Instruction.RightBackSpeed := RightSpeed/2;
+            Instruction.RightBackPin1 := True;
+            Instruction.RightBackPin2 := not Instruction.RightBackPin1;
+            
         end case;
       
         ControlMotor(Instruction, MotorDriver.GetMotorPins);

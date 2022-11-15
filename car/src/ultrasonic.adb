@@ -13,7 +13,7 @@ package body Ultrasonic is
       dummy : Boolean; -- we dont use this variable for anything, but need it to setup the input (bad API)
    begin
       Set(trigger_pin, False); --set to output
-      dummy := Set(echo_pin); --set to input
+      dummy :=  Set(echo_pin); --set to input
 
       trigger_pin_device := Points(trigger_pin).Pin;
       echo_pin_device := Points(echo_pin).Pin;
@@ -33,7 +33,7 @@ package body Ultrasonic is
    procedure SendTriggerPulse is
    begin
       GPIO_Periph.OUT_k.Arr (trigger_pin_device) := high;
-      Delay_Us(10); -- Not 10 us, more about 11.4us (10 us+ required by ultrasonic spec)
+      Delay_Us(15); -- Not 10 us, more about 11.4us (10 us+ required by ultrasonic spec)
                        --Higher delays become more accurate
                       -- If you use direct pin assignment setting a pin once before the loop (to be output, see init)
                       -- and using GPIO_Periph.OUT_k.Arr (1) := high or low (use With NRF_SVD.GPIO; use NRF_SVD.GPIO;)

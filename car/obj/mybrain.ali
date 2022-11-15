@@ -25,8 +25,8 @@ Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 D ada.ads		20220915114508 76789da1 ada%s
 D a-except.ads		20220915114510 946f3014 ada.exceptions%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
-D mybrain.ads		20221110122352 c835b0c6 mybrain%s
-D mybrain.adb		20221107102640 836b38cd mybrain%b
+D mybrain.ads		20221115114238 c835b0c6 mybrain%s
+D mybrain.adb		20221114110348 836b38cd mybrain%b
 D system.ads		20220915114514 ad54c63c system%s
 D s-bb.ads		20220915114508 09e072ae system.bb%s
 D s-bbbopa.ads		20220915114514 f68efaf0 system.bb.board_parameters%s
@@ -52,40 +52,40 @@ D s-taskin.ads		20220915114514 989d56fd system.tasking%s
 D s-taprob.ads		20220915114514 c8fc0753 system.tasking.protected_objects%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 G a e
-G c Z s b [getmeasurementsensor1 mybrain__brain 4 16 none]
-G c Z s b [getmeasurementsensor2 mybrain__brain 5 16 none]
-G c Z s b [getmeasurementsensor3 mybrain__brain 6 16 none]
-G c Z s b [setmeasurementsensor1 mybrain__brain 8 17 none]
-G c Z s b [setmeasurementsensor2 mybrain__brain 9 17 none]
-G c Z s b [setmeasurementsensor3 mybrain__brain 10 17 none]
-G c Z s b [brain__getmeasurementsensor1N mybrain 4 7 none]
-G c Z s b [brain__getmeasurementsensor1P mybrain 4 7 none]
-G c Z s b [brain__getmeasurementsensor2N mybrain 5 7 none]
-G c Z s b [brain__getmeasurementsensor2P mybrain 5 7 none]
-G c Z s b [brain__getmeasurementsensor3N mybrain 6 7 none]
-G c Z s b [brain__getmeasurementsensor3P mybrain 6 7 none]
-G c Z s b [brain__setmeasurementsensor1N mybrain 8 7 none]
-G c Z s b [brain__setmeasurementsensor1P mybrain 8 7 none]
-G c Z s b [brain__setmeasurementsensor2N mybrain 9 7 none]
-G c Z s b [brain__setmeasurementsensor2P mybrain 9 7 none]
-G c Z s b [brain__setmeasurementsensor3N mybrain 10 7 none]
-G c Z s b [brain__setmeasurementsensor3P mybrain 10 7 none]
+G c Z s b [getmeasurementsensor1 mybrain__brain 5 16 none]
+G c Z s b [getmeasurementsensor2 mybrain__brain 6 16 none]
+G c Z s b [getmeasurementsensor3 mybrain__brain 7 16 none]
+G c Z s b [setmeasurementsensor1 mybrain__brain 9 17 none]
+G c Z s b [setmeasurementsensor2 mybrain__brain 10 17 none]
+G c Z s b [setmeasurementsensor3 mybrain__brain 11 17 none]
+G c Z s b [brain__getmeasurementsensor1N mybrain 5 7 none]
+G c Z s b [brain__getmeasurementsensor1P mybrain 5 7 none]
+G c Z s b [brain__getmeasurementsensor2N mybrain 6 7 none]
+G c Z s b [brain__getmeasurementsensor2P mybrain 6 7 none]
+G c Z s b [brain__getmeasurementsensor3N mybrain 7 7 none]
+G c Z s b [brain__getmeasurementsensor3P mybrain 7 7 none]
+G c Z s b [brain__setmeasurementsensor1N mybrain 9 7 none]
+G c Z s b [brain__setmeasurementsensor1P mybrain 9 7 none]
+G c Z s b [brain__setmeasurementsensor2N mybrain 10 7 none]
+G c Z s b [brain__setmeasurementsensor2P mybrain 10 7 none]
+G c Z s b [brain__setmeasurementsensor3N mybrain 11 7 none]
+G c Z s b [brain__setmeasurementsensor3P mybrain 11 7 none]
 G c Z s s [brainTVIP mybrain 3 4 none]
 X 4 mybrain.ads
-1K9*MyBrain 18l5 18e12 5|1b14 42l5 42t12
+1K9*MyBrain 19l5 19e12 5|1b14 42l5 42t12
 3w14*Brain 5|4b20 40l8 40t13
-4V16 GetMeasurementSensor1{integer} 5|12b16 15l11 15t32
-5V16 GetMeasurementSensor2{integer} 5|24b16 27l11 27t32
-6V16 GetMeasurementSensor3{integer} 5|35b16 38l11 38t32
-8U17 SetMeasurementSensor1 8>40 5|6b17 9l11 9t32
-8i40 V{integer} 5|6b40 8r32
-9U17 SetMeasurementSensor2 9>40 5|18b17 21l11 21t32
-9i40 V{integer} 5|18b40 20r32
-10U17 SetMeasurementSensor3 10>40 5|30b17 33l11 33t32
-10i40 V{integer} 5|30b40 32r32
-13i10 MeasurementSensor1{integer} 5|8r10 14r17
-14i10 MeasurementSensor2{integer} 5|20r10 26r17
-15i10 MeasurementSensor3{integer} 5|32r10 37r17
+5V16 GetMeasurementSensor1{integer} 5|12b16 15l11 15t32
+6V16 GetMeasurementSensor2{integer} 5|24b16 27l11 27t32
+7V16 GetMeasurementSensor3{integer} 5|35b16 38l11 38t32
+9U17 SetMeasurementSensor1 9>40 5|6b17 9l11 9t32
+9i40 V{integer} 5|6b40 8r32
+10U17 SetMeasurementSensor2 10>40 5|18b17 21l11 21t32
+10i40 V{integer} 5|18b40 20r32
+11U17 SetMeasurementSensor3 11>40 5|30b17 33l11 33t32
+11i40 V{integer} 5|30b40 32r32
+14i10 MeasurementSensor1{integer} 5|8r10 14r17
+15i10 MeasurementSensor2{integer} 5|20r10 26r17
+16i10 MeasurementSensor3{integer} 5|32r10 37r17
 X 22 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
 X 27 s-taskin.ads

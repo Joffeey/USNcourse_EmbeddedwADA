@@ -20,7 +20,7 @@ RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U tasksense%b		tasksense.adb		a2555c71 OO PK
+U tasksense%b		tasksense.adb		a78137f2 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -35,7 +35,7 @@ Z nrf_svd.gpio%s	nrf_svd-gpio.ads	nrf_svd-gpio.ali
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 W ultrasonic%s		ultrasonic.adb		ultrasonic.ali  ED
 
-U tasksense%s		tasksense.ads		c56ce8a9 EE OO PK
+U tasksense%s		tasksense.ads		c0b8832a EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W mybrain%s		mybrain.adb		mybrain.ali
 Z system%s		system.ads		system.ali
@@ -69,7 +69,7 @@ D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
 D microbit-timehighspeed.ads  20221031121908 1d0073c3 microbit.timehighspeed%s
-D mybrain.ads		20221110122352 c835b0c6 mybrain%s
+D mybrain.ads		20221115114238 c835b0c6 mybrain%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -120,10 +120,10 @@ D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
-D tasksense.ads		20221107093246 0d59586f tasksense%s
-D tasksense.adb		20221110122326 c7f8da6c tasksense%b
+D tasksense.ads		20221114144532 088d33ec tasksense%s
+D tasksense.adb		20221114150608 c7f8da6c tasksense%b
 D ultrasonic.ads	20221110122342 a71dfa55 ultrasonic%s
-D ultrasonic.adb	20221107093246 0995d251 ultrasonic%b
+D ultrasonic.adb	20221115085100 3856612e ultrasonic%b
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
 G c b b b [b tasksense 3 1 none]
@@ -133,16 +133,16 @@ G r i none [b tasksense 3 1 none] [ultrasonic standard 4 9 none]
 G r c none [b tasksense 3 1 none] [set microbit__iosfortasking 22 14 none]
 G r c none [b tasksense 3 1 none] [set microbit__iosfortasking 25 13 none]
 G r c none [b tasksense 3 1 none] [delay_us microbit__timehighspeed 35 14 none]
-G r p none [b tasksense 3 1 none] [setmeasurementsensor1 mybrain__brain 8 17 none]
-G r p none [b tasksense 3 1 none] [setmeasurementsensor2 mybrain__brain 9 17 none]
-G r p none [b tasksense 3 1 none] [setmeasurementsensor3 mybrain__brain 10 17 none]
+G r p none [b tasksense 3 1 none] [setmeasurementsensor1 mybrain__brain 9 17 none]
+G r p none [b tasksense 3 1 none] [setmeasurementsensor2 mybrain__brain 10 17 none]
+G r p none [b tasksense 3 1 none] [setmeasurementsensor3 mybrain__brain 11 17 none]
 G r i none [senseTK tasksense 5 9 none] [ultrasonic standard 4 9 none]
 G r c none [senseTK tasksense 5 9 none] [set microbit__iosfortasking 22 14 none]
 G r c none [senseTK tasksense 5 9 none] [set microbit__iosfortasking 25 13 none]
 G r c none [senseTK tasksense 5 9 none] [delay_us microbit__timehighspeed 35 14 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor1 mybrain__brain 8 17 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor2 mybrain__brain 9 17 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor3 mybrain__brain 10 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor1 mybrain__brain 9 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor2 mybrain__brain 10 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor3 mybrain__brain 11 17 none]
 X 1 ada.ads
 16K9*Ada 20e8 76|1r6 1r25
 X 6 a-reatim.ads
@@ -161,11 +161,11 @@ X 18 hal-spi.ads
 X 19 hal-uart.ads
 48h9*UART_Port
 X 24 mybrain.ads
-1K9*MyBrain 18e12 75|1w6 1r19
+1K9*MyBrain 19e12 75|1w6 1r19
 3w14*Brain 76|17r10 18r10 19r10
-8U17 SetMeasurementSensor1 76|17s16
-9U17 SetMeasurementSensor2 76|18s16
-10U17 SetMeasurementSensor3 76|19s16
+9U17 SetMeasurementSensor1 76|17s16
+10U17 SetMeasurementSensor2 76|18s16
+11U17 SetMeasurementSensor3 76|19s16
 X 50 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>

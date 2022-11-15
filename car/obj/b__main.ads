@@ -68,7 +68,6 @@ package ada_main is
    --  system.traceback_entries%b
    --  system.unsigned_types%s
    --  interfaces.nrf52.rtc%s
-   --  system.img_uns%s
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_jis%s
@@ -178,10 +177,6 @@ package ada_main is
    --  system.assertions%b
    --  system.pool_global%s
    --  system.pool_global%b
-   --  system.random_seed%s
-   --  system.random_seed%b
-   --  system.random_numbers%s
-   --  system.random_numbers%b
    --  system.tasking.protected_objects%s
    --  system.tasking.protected_objects%b
    --  system.tasking.restricted%s
@@ -270,6 +265,8 @@ package ada_main is
    --  microbit.timehighspeed%b
    --  mymotordriver%s
    --  mymotordriver%b
+   --  drivingstates%s
+   --  drivingstates%b
    --  randomdirection%s
    --  randomdirection%b
    --  taskact%s

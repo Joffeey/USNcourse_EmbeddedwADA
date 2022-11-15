@@ -17,11 +17,11 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U mymotordriver%b	mymotordriver.adb	aad1d3ee NE OO PK
+U mymotordriver%b	mymotordriver.adb	271ea755 NE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U mymotordriver%s	mymotordriver.ads	e34f26a3 EE OO PF PK
+U mymotordriver%s	mymotordriver.ads	6e805218 EE OO PF PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali
@@ -48,7 +48,7 @@ D hal-uart.ads		20220915114714 d58316b4 hal.uart%s
 D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
-D mymotordriver.ads	20221107142410 9eb2add3 mymotordriver%s
+D mymotordriver.ads	20221115114232 137dd968 mymotordriver%s
 D mymotordriver.adb	20221107093246 34637e3d mymotordriver%b
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
@@ -131,12 +131,13 @@ X 20 microbit-iosfortasking.ads
 28I9*Analog_Value<short_integer> 21|9r28 12r28 16r30 19r29
 X 21 mymotordriver.ads
 4K9*MyMotorDriver 52l5 52e18 22|1b14 29l5 29t18
-6E9*Directions 6e73 42r36 46r35 48r24 22|5r35 11r36
+6E9*Directions 6e84 42r36 46r35 48r24 22|5r35 11r36
 6n24*Forward{6E9}
 6n33*Stop{6E9} 48r38
 6n39*RotateRight{6E9}
 6n52*RotateLeft{6E9}
 6n64*Backward{6E9}
+6n74*TurnRight{6E9}
 8R9*DriveInstruction 22e14
 9i12*LeftFrontSpeed{20|28I9}
 10b12*LeftFrontPin1{boolean}

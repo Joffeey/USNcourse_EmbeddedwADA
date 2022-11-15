@@ -47,7 +47,8 @@ package body ada_main is
    E190 : Short_Integer; pragma Import (Ada, E190, "microbit__iosfortasking_E");
    E238 : Short_Integer; pragma Import (Ada, E238, "microbit__timehighspeed_E");
    E234 : Short_Integer; pragma Import (Ada, E234, "mymotordriver_E");
-   E251 : Short_Integer; pragma Import (Ada, E251, "randomdirection_E");
+   E251 : Short_Integer; pragma Import (Ada, E251, "drivingstates_E");
+   E253 : Short_Integer; pragma Import (Ada, E253, "randomdirection_E");
    E123 : Short_Integer; pragma Import (Ada, E123, "taskact_E");
    E246 : Short_Integer; pragma Import (Ada, E246, "taskthink_E");
    E244 : Short_Integer; pragma Import (Ada, E244, "ultrasonic_E");
@@ -225,7 +226,9 @@ package body ada_main is
       E238 := E238 + 1;
       Mymotordriver'Elab_Spec;
       E234 := E234 + 1;
+      Drivingstates'Elab_Spec;
       E251 := E251 + 1;
+      E253 := E253 + 1;
       Taskact'Elab_Spec;
       Taskact'Elab_Body;
       E123 := E123 + 1;
@@ -263,6 +266,7 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   C:\Ada\car\obj\mybrain.o
    --   C:\Ada\car\obj\mymotordriver.o
+   --   C:\Ada\car\obj\drivingstates.o
    --   C:\Ada\car\obj\randomdirection.o
    --   C:\Ada\car\obj\taskact.o
    --   C:\Ada\car\obj\taskthink.o

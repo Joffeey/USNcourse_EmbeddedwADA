@@ -10,14 +10,23 @@ A -march=armv7e-m+fp
 P DB LC TF  SS ZX
 
 RN
+RV NO_PROTECTED_TYPES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
 
-U randomdirection%b	randomdirection.adb	a5531595 NE OO PK
+U drivingstates%b	drivingstates.adb	5aae1787 NE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U randomdirection%s	randomdirection.ads	9b048e55 EE NE OO PK
+U drivingstates%s	drivingstates.ads	b237ff95 EE OO PF PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W mybrain%s		mybrain.adb		mybrain.ali
 W mymotordriver%s	mymotordriver.adb	mymotordriver.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
 D ada.ads		20220915114508 76789da1 ada%s
 D a-except.ads		20220915114510 946f3014 ada.exceptions%s
@@ -31,6 +40,8 @@ D a-stuten.ads		20220915114510 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
+D drivingstates.ads	20221115115826 697f963b drivingstates%s
+D drivingstates.adb	20221115115842 33d181bc drivingstates%b
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -39,6 +50,7 @@ D hal-uart.ads		20220915114714 d58316b4 hal.uart%s
 D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
+D mybrain.ads		20221115114238 c835b0c6 mybrain%s
 D mymotordriver.ads	20221115114232 137dd968 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
@@ -54,8 +66,6 @@ D nrf_svd-spi.ads	20220915114712 6e2ffb69 nrf_svd.spi%s
 D nrf_svd-timer.ads	20220915114712 ba50db1c nrf_svd.timer%s
 D nrf_svd-twi.ads	20220915114712 68301534 nrf_svd.twi%s
 D nrf_svd-uart.ads	20220915114712 83bcebc8 nrf_svd.uart%s
-D randomdirection.ads	20221114095326 8879573d randomdirection%s
-D randomdirection.adb	20221110123120 2d2a42a8 randomdirection%b
 D system.ads		20220915114514 ad54c63c system%s
 D s-bb.ads		20220915114508 09e072ae system.bb%s
 D s-bbbopa.ads		20220915114514 f68efaf0 system.bb.board_parameters%s
@@ -91,29 +101,60 @@ D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z s b [getrandomdirection randomdirection 7 13 none]
-X 14 hal-gpio.ads
+G c Z s b [canmoveforward drivingstates__states 9 16 none]
+G c Z s b [canrotleft drivingstates__states 10 16 none]
+G c Z s b [canrotright drivingstates__states 11 16 none]
+G c Z s b [setstate drivingstates__states 13 16 none]
+G c Z s b [states__canmoveforwardN drivingstates 9 7 none]
+G c Z s b [states__canmoveforwardP drivingstates 9 7 none]
+G c Z s b [states__canrotleftN drivingstates 10 7 none]
+G c Z s b [states__canrotleftP drivingstates 10 7 none]
+G c Z s b [states__canrotrightN drivingstates 11 7 none]
+G c Z s b [states__canrotrightP drivingstates 11 7 none]
+G c Z s b [states__setstateN drivingstates 13 7 none]
+G c Z s b [states__setstateP drivingstates 13 7 none]
+G c Z s s [statesTVIP drivingstates 7 4 none]
+X 13 drivingstates.ads
+4K9*DrivingStates 18l5 18e18 14|1b14 50l5 50t18
+5E9*DrivState 5e61 9r44 10r40 11r41 13r94 14|5r44 14r40 23r41 34r94
+5n23*Stopping{5E9} 14|43r20
+5n33*DriveForward{5E9} 14|37r20
+5n47*Rleft{5E9} 14|39r20
+5n54*Rright{5E9} 14|41r20
+7w14*States 14|3b19 47l8 47t14
+9V16 CanMoveForward{boolean} 9>32 9>55 14|5b16 12l11 12t25
+9e32 CurrState{5E9} 14|5b32
+9i55 SensorFront{integer} 14|5b55 7r13
+10V16 CanRotLeft{boolean} 10>28 10>51 10>73 10>96 14|14b16 21l11 21t21
+10e28 CurrState{5E9} 14|14b28
+10i51 SensorLeft{integer} 14|14b51 16r13
+10i73 SensorRight{integer} 14|14b73 16r26
+10i96 SensorFront{integer} 14|14b96
+11V16 CanRotRight{boolean} 11>29 11>52 11>74 11>97 14|23b16 30l11 30t22
+11e29 CurrState{5E9} 14|23b29
+11i52 SensorLeft{integer} 14|23b52 25r27
+11i74 SensorRight{integer} 14|23b74 25r13
+11i97 SensorFront{integer} 14|23b97
+13V16 SetState{5E9} 13>25 13>48 13>67 14|34b16 45l11 45t19
+13b25 ForwardTrue{boolean} 14|34b25 36r13
+13b48 RotLeft{boolean} 14|34b48 38r16
+13b67 RotRight{boolean} 14|34b67 40r16
+X 16 hal-gpio.ads
 47h9*GPIO_Point
-X 15 hal-i2c.ads
+X 17 hal-i2c.ads
 48h9*I2C_Port
-X 16 hal-spi.ads
+X 18 hal-spi.ads
 48h9*SPI_Port
-X 17 hal-uart.ads
+X 19 hal-uart.ads
 48h9*UART_Port
-X 21 mymotordriver.ads
-4K9*MyMotorDriver 52e18 36|1w6 1r25
-6E9*Directions 6e84 36|7r51 37|3r52
-6n39*RotateRight{6E9} 37|9r23
-6n52*RotateLeft{6E9} 37|8r23
-X 36 randomdirection.ads
-3K9*RandomDirection 9l5 9e20 37|1b14 14l5 14t20
-5I9*Choice<short_short_integer> 7r36 37|3r36
-7V13*GetRandomDirection{21|6E9} 7>32 37|3b13 11l8 11t26
-7i32 V{5I9} 37|3b32 7r15
-X 51 s-interr.ads
+X 23 mybrain.ads
+1K9*MyBrain 13|1w6 1r19 23|19e12
+X 24 mymotordriver.ads
+4K9*MyMotorDriver 13|2w6 2r25 24|52e18
+X 52 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 59 s-secsta.ads
+X 60 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 67 s-taskin.ads
-398V13*Get_Sec_Stack{59|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 68 s-taskin.ads
+398V13*Get_Sec_Stack{60|46P9} 399i<c,__gnat_get_secondary_stack>22
 
