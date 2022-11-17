@@ -1,22 +1,41 @@
 With Ada.Real_Time; use Ada.Real_Time;
-With Ultrasonic; use Ultrasonic;
+With Ultrasonic; -- use Ultrasonic;
+with MicroBit.Radio;
+with HAL; use HAL;
+with MicroBit.Console; use MicroBit.Console;
+with nRF.Radio;
+use MicroBit;
 package body TaskSense is
 
     task body sense is
       myClock : Time;
+      RXdata : Radio.RadioData;
+      package Ultrasonic1 is new Ultrasonic;
+      package Ultrasonic2 is new Ultrasonic;
+      package Ultrasonic3 is new Ultrasonic;
+      
    begin
-      Setup(10,11);
+      Ultrasonic1.Setup(10,11);
+      Ultrasonic2.Setup(5,19);
+      Ultrasonic3.Setup(9,8);
+      
+
+      Radio.Setup(RadioFrequency => 2407,
+               Length => 3+12,
+               Version => 12,
+               Group => 1,
+               Protocol => 14);
+      Radio.StartReceiving;
+      Put_Line(Radio.State);
       loop
-         myClock := Clock; --important to get current time such that the period is exactly 200ms.
-                           --you need to make sure that the instruction NEVER takes more than this period. 
-                           --make sure to measure how long the task needs, see Tasking_Calculate_Execution_Time example in the repository.
-                           --What if for some known or unknown reason the execution time becomes larger?
-                           --When Worst Case Execution Time (WCET) is overrun so higher than your set period, see : https://www.sigada.org/ada_letters/dec2003/07_Puente_final.pdf
-                           --In this template we put the responsiblity on the designer/developer.
-        -- delay (0.024); --simulate a sensor eg the ultrasonic sensors needs at least 24ms for 400cm range.
-         Brain.SetMeasurementSensor1(Integer(Ultrasonic.Read)); -- random value, hook up a sensor here!
-        -- Brain.SetMeasurementSensor2 (1);
+         myClock := Clock; 
+         Brain.SetMeasurementSensor1(Integer(Ultrasonic1.Read));
+         Brain.SetMeasurementSensor2(Integer(Ultrasonic2.Read));
+         Brain.SetMeasurementSensor3(Integer(Ultrasonic3.Read));
             
+         while Radio.DataReady loop
+            Brain.SetMeasurementSensor4 (Radio.Receive); -- random value, hook up a sensor here!
+         end loop;
          delay until myClock + Milliseconds(200); --random period
       end loop;
    end sense;
