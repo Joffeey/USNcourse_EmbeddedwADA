@@ -2,10 +2,9 @@ with MyMotorDriver; use MyMotorDriver;
 
 package TaskAct is
 
-   task Act with Priority=> 3;
+   task Act with Priority=> 2;
 
-   procedure SetupMotors;    
+   procedure Setup;    
    procedure Drive (direction : Directions);
-   procedure ControlMotor(Instruction : DriveInstruction; Pins : MotorControllerPins);
-   
+   procedure DriveWheel(w : Wheel);
 end TaskAct;
