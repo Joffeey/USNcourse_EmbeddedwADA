@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+Code used to calculate Utilization test results
 Created on Tue Nov 15 16:36:25 2022
 
 @author: John Frederick LÆRUM
