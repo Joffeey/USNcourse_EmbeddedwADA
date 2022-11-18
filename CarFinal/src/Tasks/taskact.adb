@@ -17,17 +17,16 @@ package body TaskAct is
          
          Drive(CurrentDirection);
          
-         delay until myClock + Milliseconds(20);  --random period, but faster than 20 ms is no use because Set_Analog_Period_Us(20000) !
-                                                  --faster is better but note the weakest link: if decisions in the thinking task come at 100ms and acting come at 20ms 
-                                                  --then no change is set in the acting task for at least 5x (and is wasting power to wake up and execute task!)
+         delay until myClock + Milliseconds(20);
       end loop;
+      
    end act;
    
    procedure SetupMotors is
       Pins : MotorControllerPins;
       
    begin
-      Pins.LeftFrontSpeedEnA := 0; -- set you MB pins here. Note that some pins overlap with other M:B functions! See the Microbit package to inspect which function lives on which pin.
+      Pins.LeftFrontSpeedEnA := 0;
       Pins.LeftFrontPin1In1 := 6;
       Pins.LeftFrontPin2In2 := 7;
       Pins.LeftBackSpeedEnB := 0;
@@ -43,27 +42,26 @@ package body TaskAct is
       
       MotorDriver.SetMotorPins(Pins);
       
-      --For example set the PWM period, as you only need to do this once
-      Set_Analog_Period_Us (20_000); --20 ms = 50 Hz, typical for many actuators. You can change this, check the motor behavior with an oscilloscope.
+      Set_Analog_Period_Us (20_000);
      
       null;
    end;
       
    procedure Drive(Direction : Directions) is
       Instruction : DriveInstruction;
-      RightSpeed : Analog_Value := 512;
-      LeftSpeed : Analog_Value := 550;
+      RightSpeed : Analog_Value := 512; -- a value between 0 and 1023
+      LeftSpeed : Analog_Value := 550; -- a value between 0 and 1023
    begin
       case Direction is 
          when Forward => 
-            Instruction.LeftFrontSpeed := LeftSpeed; -- speed is dutycycle between 0 and 100% => so a value between 0 and 1023
+            Instruction.LeftFrontSpeed := LeftSpeed; 
             Instruction.LeftFrontPin1 := True;
-            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1; -- the second pin is always the opposite of the first!
+            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1;
             Instruction.LeftBackSpeed := LeftSpeed;  
             Instruction.LeftBackPin1 := True;
             Instruction.LeftBackPin2 := not Instruction.LeftBackPin1;
            
-            Instruction.RightFrontSpeed := RightSpeed; -- the speed of right front wheel is equal to the left front wheel. For traditional steering (eg turn left) the speed of left wheel is slower than right wheel 
+            Instruction.RightFrontSpeed := RightSpeed; 
             Instruction.RightFrontPin1 := True;
             Instruction.RightFrontPin2 := not Instruction.RightFrontPin1; 
             Instruction.RightBackSpeed := RightSpeed;
@@ -73,7 +71,7 @@ package body TaskAct is
          when Stop => 
             Instruction.LeftFrontSpeed := 0;
             Instruction.LeftFrontPin1 := False;
-            Instruction.LeftFrontPin2 := False; -- here the second pin is the same as pin 1 because when both are off (false) there is no power consumption (not tested this!)
+            Instruction.LeftFrontPin2 := False;
             Instruction.LeftBackSpeed := 0;
             Instruction.LeftBackPin1 := False;
             Instruction.LeftBackPin2 := False;
@@ -88,7 +86,7 @@ package body TaskAct is
          when RotateRight =>
             Instruction.LeftFrontSpeed := LeftSpeed;
             Instruction.LeftFrontPin1 := True;
-            Instruction.LeftFrontPin2 := False; -- here the second pin is the same as pin 1 because when both are off (false) there is no power consumption (not tested this!)
+            Instruction.LeftFrontPin2 := False; 
             Instruction.LeftBackSpeed := LeftSpeed;
             Instruction.LeftBackPin1 := True;
             Instruction.LeftBackPin2 := False;
@@ -103,7 +101,7 @@ package body TaskAct is
          when RotateLeft =>
             Instruction.LeftFrontSpeed := LeftSpeed;
             Instruction.LeftFrontPin1 := False;
-            Instruction.LeftFrontPin2 := True; -- here the second pin is the same as pin 1 because when both are off (false) there is no power consumption (not tested this!)
+            Instruction.LeftFrontPin2 := True; 
             Instruction.LeftBackSpeed := LeftSpeed;
             Instruction.LeftBackPin1 := False;
             Instruction.LeftBackPin2 := True;
@@ -116,39 +114,23 @@ package body TaskAct is
             Instruction.RightBackPin2 := False;
             
          when Backward =>
-            Instruction.LeftFrontSpeed := LeftSpeed; -- speed is dutycycle between 0 and 100% => so a value between 0 and 1023
+            Instruction.LeftFrontSpeed := LeftSpeed; 
             Instruction.LeftFrontPin1 := False;
-            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1; -- the second pin is always the opposite of the first!
+            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1; 
             Instruction.LeftBackSpeed := LeftSpeed;  
             Instruction.LeftBackPin1 := False;
             Instruction.LeftBackPin2 := not Instruction.LeftBackPin1;
            
-            Instruction.RightFrontSpeed := RightSpeed; -- the speed of right front wheel is equal to the left front wheel. For traditional steering (eg turn left) the speed of left wheel is slower than right wheel 
+            Instruction.RightFrontSpeed := RightSpeed;  
             Instruction.RightFrontPin1 := False;
             Instruction.RightFrontPin2 := not Instruction.RightFrontPin1; 
             Instruction.RightBackSpeed := RightSpeed;
             Instruction.RightBackPin1 := False;
             Instruction.RightBackPin2 := not Instruction.RightBackPin1;
             
-         when TurnRight =>
-            Instruction.LeftFrontSpeed := LeftSpeed; -- speed is dutycycle between 0 and 100% => so a value between 0 and 1023
-            Instruction.LeftFrontPin1 := True;
-            Instruction.LeftFrontPin2 := not Instruction.LeftFrontPin1; -- the second pin is always the opposite of the first!
-            Instruction.LeftBackSpeed := LeftSpeed;  
-            Instruction.LeftBackPin1 := True;
-            Instruction.LeftBackPin2 := not Instruction.LeftBackPin1;
-           
-            Instruction.RightFrontSpeed := RightSpeed/2; -- the speed of right front wheel is equal to the left front wheel. For traditional steering (eg turn left) the speed of left wheel is slower than right wheel 
-            Instruction.RightFrontPin1 := True;
-            Instruction.RightFrontPin2 := not Instruction.RightFrontPin1; 
-            Instruction.RightBackSpeed := RightSpeed/2;
-            Instruction.RightBackPin1 := True;
-            Instruction.RightBackPin2 := not Instruction.RightBackPin1;
-            
         end case;
       
         ControlMotor(Instruction, MotorDriver.GetMotorPins);
-        -- Put_Line ("Direction is: " & Directions'Image (Direction));
             
       end Drive;
    
@@ -176,11 +158,7 @@ package body TaskAct is
          --speed 
          MicroBit.IOsForTasking.Write (Pins.LeftFrontSpeedEnA, Instruction.LeftFrontSpeed); --left speed control ENA ENB 
          MicroBit.IOsForTasking.Write (Pins.RightFrontSpeedEnA, Instruction.RightFrontSpeed); --right speed control ENA ENB
-
-         --note that we can drive each wheel individually as well if each wheel has a unique pin
-         --the code above combines two wheels as they are wired on the same pin.
-         --MicroBit.IOs.Write (Pins.LeftBackSpeedEnB, Instruction.LeftBackSpeed); --disabled since same pin as above
-         --MicroBit.IOs.Write (Pins.RightBackSpeedEnB, Instruction.RightBackSpeed); --disabled since same pin as above
+      
    end ControlMotor;
    
 end TaskAct;

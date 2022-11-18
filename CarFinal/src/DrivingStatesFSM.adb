@@ -56,9 +56,6 @@ package body DrivingStatesFSM is
          MotorDriver.SetDirection (RotateLeft);
       end Unstuck;
       
-      
-         
-      
    end States;
    
    

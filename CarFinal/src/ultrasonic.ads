@@ -1,6 +1,7 @@
 With MicroBit.IOsForTasking; use MicroBit.IOsForTasking;
 
-generic -- Had to make the package generic to make multiple instances of it. Might be a better way for this.
+generic -- Had to make the package generic to make multiple instances of it,
+        -- so we could configure multiple distance sensors. Might be a better way for this.
 package Ultrasonic is
 
    type Distance_cm is range 0 .. 400; -- if < 2 it is invalid

@@ -6,6 +6,7 @@ package body TaskSense is
 
     task body sense is
       myClock : Time;
+      -- making an instance for each distance sensor
       package Ultrasonic1 is new Ultrasonic;
       package Ultrasonic2 is new Ultrasonic;
       package Ultrasonic3 is new Ultrasonic;
@@ -17,6 +18,7 @@ package body TaskSense is
       
       WirelessRadio.SetupRadio;
       WirelessRadio.EnableReceiving;
+      
       loop
          myClock := Clock; 
          Brain.SetMeasurementSensor1(Integer(Ultrasonic1.Read));
@@ -26,10 +28,10 @@ package body TaskSense is
          while DataReady loop
             Brain.SetRadioSensor(Receive);
          end loop;
-         
             
-         delay until myClock + Milliseconds(150); --random period
+         delay until myClock + Milliseconds(150);
       end loop;
+      
    end sense;
 
 end TaskSense;

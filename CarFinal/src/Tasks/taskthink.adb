@@ -6,7 +6,6 @@ with HAL; use HAL;
 with ControllerDrivingStates;
 with nRF.Radio; use nRF.Radio;
 
-
 package body TaskThink is
 
    task body think is
@@ -67,7 +66,6 @@ package body TaskThink is
             
             if TurnCounter > 100 then
                States.Unstuck;
-
             end if;
             
          end if;
@@ -75,7 +73,7 @@ package body TaskThink is
          delay until myClock + Milliseconds(10); 
          
       end loop;
+      
    end think;
-
 
 end TaskThink;
