@@ -20,7 +20,9 @@ UtilBound = NoOfTasks*(2**(1/NoOfTasks) - 1)
 
 UtilTest = (Comput_Sense / Period_Sense) + (Comput_Act / Period_Act) + (Comput_Think / Period_Think)
 
-
-print("The Utilization test concludes with:",UtilTest, ". Which is less than ", UtilBound)
+if (UtilTest < UtilBound):
+  print("The Utilization test concludes with:",UtilTest, ". Which is less than ", UtilBound, "TEST PASSED")
+else:
+  print("The Utilization test concludes with:",UtilTest, ". Which is greater than ", UtilBound, "TEST FAILED")
 
 
