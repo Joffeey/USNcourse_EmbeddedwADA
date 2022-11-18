@@ -1,0 +1,1 @@
+taskthink.adb:74:33: warning: "HighestCPU_Think" may be referenced before it has a value [enabled by default]

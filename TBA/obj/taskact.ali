@@ -1,0 +1,284 @@
+V "GNAT Lib v2021"
+A -gnatA
+A --RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=hard
+A -mfpu=fpv4-sp-d16
+A -mcpu=cortex-m4
+A -march=armv7e-m+fp
+P DB LC TF  SS ZX
+
+RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV STATIC_PRIORITIES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV MAX_TASKS=1
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U taskact%b		taskact.adb		5de6c921 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.execution_time%s	a-exetim.adb		a-exetim.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W microbit%s		microbit.ads		microbit.ali
+W microbit.console%s	microbit-console.adb	microbit-console.ali  AD
+W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali  AD
+Z mymotordriver%s	mymotordriver.adb	mymotordriver.ali  AD
+Z system.img_fixed_64%s	s-imfi64.ads		s-imfi64.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+U taskact%s		taskact.ads		90f94279 EE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W mymotordriver%s	mymotordriver.adb	mymotordriver.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+T 1 1
+
+D ada.ads		20220915125812 76789da1 ada%s
+D a-except.ads		20220915125814 946f3014 ada.exceptions%s
+D a-exetim.ads		20220915125814 006b9423 ada.execution_time%s
+D a-finali.ads		20220915125814 bf4f806b ada.finalization%s
+D a-interr.ads		20220915125814 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20220915125814 543e27b6 ada.interrupts.names%s
+D a-reatim.ads		20220915125814 cfe92427 ada.real_time%s
+D a-retide.ads		20220915125814 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20220915125812 119b8fb3 ada.streams%s
+D a-string.ads		20220915125814 90ac6797 ada.strings%s
+D a-sttebu.ads		20220915125814 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220915125814 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20220915125814 9eaa38c6 ada.tags%s
+D a-taside.ads		20220915125814 00e3a3f6 ada.task_identification%s
+D a-unccon.ads		20220915125812 0e9b276f ada.unchecked_conversion%s
+D hal.ads		20220922105756 2b42c80e hal%s
+D hal-gpio.ads		20220922105756 7f0c2ffe hal.gpio%s
+D hal-i2c.ads		20220922105756 0ed73138 hal.i2c%s
+D hal-spi.ads		20220922105756 fe139819 hal.spi%s
+D hal-uart.ads		20220922105756 d58316b4 hal.uart%s
+D interfac.ads		20220915125812 edec285f interfaces%s
+D microbit.ads		20220922105756 3b54a3e8 microbit%s
+D microbit-console.ads	20220922105756 0bb00661 microbit.console%s
+D microbit-iosfortasking.ads  20221114094556 7dfd8b70 microbit.iosfortasking%s
+D mymotordriver.ads	20221115131008 9eb2add3 mymotordriver%s
+D nrf.ads		20220922105754 74cf72f5 nrf%s
+D nrf-device.ads	20220922105754 9c9916c4 nrf.device%s
+D nrf-gpio.ads		20220922105754 ab6d4598 nrf.gpio%s
+D nrf-rtc.ads		20220922105754 36d88130 nrf.rtc%s
+D nrf-spi_master.ads	20220922105754 a8ff49a3 nrf.spi_master%s
+D nrf-timers.ads	20221027102806 15fa58e3 nrf.timers%s
+D nrf-twi.ads		20220922105754 4881713f nrf.twi%s
+D nrf-uart.ads		20220922105754 9fa4b8b9 nrf.uart%s
+D nrf_svd.ads		20220922105754 87ba21d7 nrf_svd%s
+D nrf_svd-rtc.ads	20220922105754 57c7ffc8 nrf_svd.rtc%s
+D nrf_svd-spi.ads	20220922105754 6e2ffb69 nrf_svd.spi%s
+D nrf_svd-timer.ads	20220922105754 ba50db1c nrf_svd.timer%s
+D nrf_svd-twi.ads	20220922105754 68301534 nrf_svd.twi%s
+D nrf_svd-uart.ads	20220922105754 83bcebc8 nrf_svd.uart%s
+D system.ads		20220915125814 ad54c63c system%s
+D s-arit64.ads		20220915125812 5f88d2b0 system.arith_64%s
+D s-bb.ads		20220915125812 09e072ae system.bb%s
+D s-bbbopa.ads		20220915125814 f68efaf0 system.bb.board_parameters%s
+D s-bbbosu.ads		20220915125814 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20220915125814 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20220915125814 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20220915125814 9339744a system.bb.mcu_parameters%s
+D s-bbpara.ads		20220915125814 63167d1e system.bb.parameters%s
+D s-bbthre.ads		20220915125814 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20220915125814 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20220915125814 ad086247 system.bb.time%s
+D s-finmas.ads		20220915125814 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20220915125814 4ff27390 system.finalization_root%s
+D s-imagef.ads		20220915125812 019cdf69 system.image_f%s
+D s-imfi64.ads		20220915125812 dbac59b3 system.img_fixed_64%s
+D s-interr.ads		20220915125814 d74bd991 system.interrupts%s
+D s-multip.ads		20220915125814 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20220915125814 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20220915125814 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220915125814 229b14dd system.os_interface%s
+D s-parame.ads		20220915125814 8e90778f system.parameters%s
+D s-pooglo.ads		20220915125814 ede33ef8 system.pool_global%s
+D s-putima.ads		20220915125814 4e095881 system.put_images%s
+D s-secsta.ads		20220915125812 56a2861c system.secondary_stack%s
+D s-stalib.ads		20220915125814 472fbca8 system.standard_library%s
+D s-stoele.ads		20220915125812 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220915125812 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220915125814 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20220915125812 7bdda3fa system.stream_attributes%s
+D s-tasinf.ads		20220915125814 801abd01 system.task_info%s
+D s-taspri.ads		20220915125814 37f162b4 system.task_primitives%s
+D s-taskin.ads		20220915125814 989d56fd system.tasking%s
+D s-taprob.ads		20220915125814 c8fc0753 system.tasking.protected_objects%s
+D s-tasres.ads		20220915125814 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20220915125814 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20220915125814 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20220915125812 2b077493 system.unsigned_types%s
+D taskact.ads		20221115130332 0e4befaa taskact%s
+D taskact.adb		20221115152920 ea621b9e taskact%b
+D unchconv.ads		20220915125812 ca2f9e18 unchecked_conversion%s
+G a e
+G c b b b [b taskact 7 1 none]
+G c Z s b [actTK taskact 5 9 none]
+G c Z s s [actTKVIP taskact 5 4 none]
+G c Z s b [setupmotors taskact 7 14 none]
+G c Z s b [drive taskact 8 14 none]
+G c Z s b [controlmotor taskact 9 14 none]
+G r p none [b taskact 7 1 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r c none [b taskact 7 1 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r p none [b taskact 7 1 none] [getdirection mymotordriver__motordriver 42 16 none]
+G r p none [b taskact 7 1 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r c none [b taskact 7 1 none] [set microbit__iosfortasking 22 14 none]
+G r c none [b taskact 7 1 none] [write microbit__iosfortasking 34 14 none]
+G r c none [b taskact 7 1 none] [put_line microbit__console 43 14 none]
+G r p none [actTK taskact 5 9 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r c none [actTK taskact 5 9 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r p none [actTK taskact 5 9 none] [getdirection mymotordriver__motordriver 42 16 none]
+G r p none [actTK taskact 5 9 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r c none [actTK taskact 5 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [actTK taskact 5 9 none] [write microbit__iosfortasking 34 14 none]
+G r c none [actTK taskact 5 9 none] [put_line microbit__console 43 14 none]
+G r p none [setupmotors taskact 7 14 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r c none [setupmotors taskact 7 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r p none [drive taskact 8 14 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r c none [drive taskact 8 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [drive taskact 8 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [controlmotor taskact 9 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [controlmotor taskact 9 14 none] [write microbit__iosfortasking 34 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 79|1r6 1r25 5r6 5r30
+X 3 a-exetim.ads
+19K13*Execution_Time 111e23 79|5w10 5r34
+23M9*CPU_Time<7|50M9> 79|13r26
+32V13*Clock{23M9} 79|25s30 30s30
+59V14*"-"{7|60I9}<7|75p13> 79|30s36
+X 7 a-reatim.ads
+40K13*Real_Time 181e18 79|1w10 1r29
+50M9*Time<51|46M9> 79|10r17 12r32
+60I9*Time_Span<51|81I9> 79|14r31 15r25 16r24
+67V13*Clock{50M9}<51|134p13> 79|24s36 27s21 31s37
+71V14*"+"{50M9} 79|37s30
+75V14*"-"{60I9} 79|31s43
+113V14*">"{boolean} 79|32r29
+118V13*To_Duration{duration} 79|34s63 35s69
+127V13*Milliseconds{60I9} 79|37s32
+X 17 hal-gpio.ads
+47h9*GPIO_Point
+X 18 hal-i2c.ads
+48h9*I2C_Port
+X 19 hal-spi.ads
+48h9*SPI_Port
+X 20 hal-uart.ads
+48h9*UART_Port
+X 21 interfac.ads
+55I9*Integer_64<long_long_integer>
+X 22 microbit.ads
+58K9*MicroBit 115e13 79|2r6 2r28 4r6 4r34 164r10 165r10 168r10 169r10 173r10
+. 174r10 177r10 178r10 181r10 182r10
+X 23 microbit-console.ads
+32K18*Console 49e21 79|2w15 2r37
+43U14*Put_Line 79|34s13 35s13
+X 24 microbit-iosfortasking.ads
+5K18*IOsForTasking 93e27 79|4w15 4r43 164r19 165r19 168r19 169r19 173r19
+. 174r19 177r19 178r19 181r19 182r19
+7I9*Pin_Id<short_short_integer>
+22U14*Set 79|164s33 165s33 168s33 169s33 173s33 174s33 177s33 178s33
+28I9*Analog_Value<short_integer> 79|71r20 72r19
+30U14*Set_Analog_Period_Us 79|64s7
+34U14*Write 79|181s33 182s33
+X 25 mymotordriver.ads
+4K9*MyMotorDriver 52e18 78|1w6 1r25
+6E9*Directions 6e73 78|8r33 79|69r32
+6n24*Forward{6E9} 79|75r15
+6n33*Stop{6E9} 79|90r15
+6n39*RotateRight{6E9} 79|105r15
+6n52*RotateLeft{6E9} 79|120r15
+6n64*Backward{6E9} 79|135r15
+8R9*DriveInstruction 22e14 78|9r41 79|70r21 159r41
+9i12*LeftFrontSpeed{24|28I9} 79|76m25 91m25 106m25 121m25 136m25 181r76
+10b12*LeftFrontPin1{boolean} 79|77m25 78r58 92m25 107m25 122m25 137m25 138r58
+. 164r72
+11b12*LeftFrontPin2{boolean} 79|78m25 93m25 108m25 123m25 138m25 165r72
+12i12*LeftBackSpeed{24|28I9} 79|79m25 94m25 109m25 124m25 139m25
+13b12*LeftBackPin1{boolean} 79|80m25 81r57 95m25 110m25 125m25 140m25 141r57
+. 168r71
+14b12*LeftBackPin2{boolean} 79|81m25 96m25 111m25 126m25 141m25 169r71
+16i12*RightFrontSpeed{24|28I9} 79|83m25 98m25 113m25 128m25 143m25 182r77
+17b12*RightFrontPin1{boolean} 79|84m25 85r59 99m25 114m25 129m25 144m25 145r59
+. 173r73
+18b12*RightFrontPin2{boolean} 79|85m25 100m25 115m25 130m25 145m25 174r73
+19i12*RightBackSpeed{24|28I9} 79|86m25 101m25 116m25 131m25 146m25
+20b12*RightBackPin1{boolean} 79|87m25 88r58 102m25 117m25 132m25 147m25 148r58
+. 177r72
+21b12*RightBackPin2{boolean} 79|88m25 103m25 118m25 133m25 148m25 178r72
+24R9*MotorControllerPins 38e14 78|9r66 79|44r14 159r65
+25i12*LeftFrontSpeedEnA{24|7I9} 79|47m12 181r45
+26i12*LeftFrontPin1In1{24|7I9} 79|48m12 164r42
+27i12*LeftFrontPin2In2{24|7I9} 79|49m12 165r42
+28i12*LeftBackSpeedEnB{24|7I9} 79|50m12
+29i12*LeftBackPin1In3{24|7I9} 79|51m12 168r42
+30i12*LeftBackPin2In4{24|7I9} 79|52m12 169r42
+32i12*RightFrontSpeedEnA{24|7I9} 79|54m12 182r45
+33i12*RightFrontPin1In1{24|7I9} 79|55m12 173r42
+34i12*RightFrontPin2In2{24|7I9} 79|56m12 174r42
+35i12*RightBackSpeedEnB{24|7I9} 79|57m12
+36i12*RightBackPin1In3{24|7I9} 79|58m12 177r42
+37i12*RightBackPin2In4{24|7I9} 79|59m12 178r42
+40w14*MotorDriver 79|28r16 61r7 154r35
+42V16 GetDirection{6E9} 79|28s28
+43V16 GetMotorPins{24R9} 79|154s47
+45U17 SetMotorPins 79|61s19
+X 41 s-arit64.ads
+44I12*Int64{21|55I9}
+54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
+X 51 s-bbtime.ads
+46M9*Time
+81I9*Time_Span<long_long_integer>
+X 56 s-interr.ads
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 64 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 72 s-taskin.ads
+398V13*Get_Sec_Stack{64|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 75 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+X 78 taskact.ads
+3K9*TaskAct 11l5 11e12 79|7b14 190l5 190t12
+5t9*Act 79|9b14 41l8 41t11
+7U14*SetupMotors 79|20s7 43b14 67t7
+8U14*Drive 8>21 79|28s10 69b14 157l11 157t16
+8e21 direction{25|6E9} 79|69b20 74r12
+9U14*ControlMotor 9>27 9>59 79|154s9 159b14 188l8 188t20
+9r27 Instruction{25|8R9} 79|159b27 164r60 165r60 168r59 169r59 173r61 174r61
+. 177r60 178r60 181r64 182r65
+9r59 Pins{25|24R9} 79|159b59 164r37 165r37 168r37 169r37 173r37 174r37 177r37
+. 178r37 181r40 182r40
+X 79 taskact.adb
+10m7 myClock{7|50M9} 27m10 37r22
+12m7 Time_Now_Stopwatch_Act{7|50M9} 24m10 31r45
+13m7 Time_Now_CPU_Act{3|23M9} 25m10 30r38
+14i7 Elapsed_Stopwatch_Act{7|60I9} 31m10 35r82
+15i7 Elapsed_CPU_Act{7|60I9} 30m10 32r13 33r31
+16i7 HighestCPU_Act{7|60I9} 32r31 33m13 34r76
+44r7 Pins{25|24R9} 47m7 48m7 49m7 50m7 51m7 52m7 54m7 55m7 56m7 57m7 58m7
+. 59m7 61r32
+70r7 Instruction{25|8R9} 76m13 77m13 78m13 78r46 79m13 80m13 81m13 81r45
+. 83m13 84m13 85m13 85r47 86m13 87m13 88m13 88r46 91m13 92m13 93m13 94m13
+. 95m13 96m13 98m13 99m13 100m13 101m13 102m13 103m13 106m13 107m13 108m13
+. 109m13 110m13 111m13 113m13 114m13 115m13 116m13 117m13 118m13 121m13 122m13
+. 123m13 124m13 125m13 126m13 128m13 129m13 130m13 131m13 132m13 133m13 136m13
+. 137m13 138m13 138r46 139m13 140m13 141m13 141r45 143m13 144m13 145m13 145r47
+. 146m13 147m13 148m13 148r46 154r22
+71i7 RightSpeed{24|28I9} 83r44 86r43 113r44 116r43 128r44 131r43 143r44 146r43
+72i7 LeftSpeed{24|28I9} 76r43 79r42 106r43 109r42 121r43 124r42 136r43 139r42
+

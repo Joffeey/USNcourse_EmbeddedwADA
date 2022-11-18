@@ -1,0 +1,31 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\git-repos\TBA\tba.gpr
+20221114094754 a190e1f076639253e64b74e49d92200e
+C:\git-repos\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20221114094556 abdd726e60d271e712bd364a6d6ccbb6
+[BOUND OBJECT FILES]
+C:\git-repos\TBA\obj\mybrain.o
+C:\git-repos\TBA\obj\mymotordriver.o
+C:\git-repos\TBA\obj\drivingstates.o
+C:\git-repos\TBA\obj\randomdirection.o
+C:\git-repos\TBA\obj\taskact.o
+C:\git-repos\TBA\obj\taskthink.o
+C:\git-repos\TBA\obj\ultrasonic.o
+C:\git-repos\TBA\obj\tasksense.o
+C:\git-repos\TBA\obj\mycontroller.o
+C:\git-repos\TBA\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\git-repos\TBA\obj\
+-LC:\git-repos\TBA\obj\
+-LC:\git-repos\Ada_Drivers_Library\boards\MicroBit_v2\obj\full_lib_Debug\
+-LC:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\
+-static
+-static-libgcc
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnarl.a
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnat.a
