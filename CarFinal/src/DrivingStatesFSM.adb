@@ -1,3 +1,5 @@
+with TaskAct;
+
 package body DrivingStatesFSM is
 
    protected body States is
@@ -46,14 +48,12 @@ package body DrivingStatesFSM is
       
       procedure Unstuck is
       begin
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
-         MotorDriver.SetDirection (RotateLeft);
+         TaskAct.Drive (RotateLeft);
+         TaskAct.Drive (RotateLeft);
+         TaskAct.Drive (RotateLeft);
+         TaskAct.Drive (RotateLeft);
+         TaskAct.Drive (RotateLeft);
+         TaskAct.Drive (RotateLeft);
       end Unstuck;
       
    end States;

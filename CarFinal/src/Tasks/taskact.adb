@@ -49,8 +49,8 @@ package body TaskAct is
       
    procedure Drive(Direction : Directions) is
       Instruction : DriveInstruction;
-      RightSpeed : Analog_Value := 512; -- a value between 0 and 1023
-      LeftSpeed : Analog_Value := 550; -- a value between 0 and 1023
+      RightSpeed : Analog_Value := 500; -- a value between 0 and 1023
+      LeftSpeed : Analog_Value := 710; -- a value between 0 and 1023
    begin
       case Direction is 
          when Forward => 

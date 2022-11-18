@@ -17,11 +17,11 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
-RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U drivingstatesfsm%b	drivingstatesfsm.adb	4b169b7f NE OO PK
+U drivingstatesfsm%b	drivingstatesfsm.adb	b2b2707b NE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W taskact%s		taskact.adb		taskact.ali
 
 U drivingstatesfsm%s	drivingstatesfsm.ads	d63158d4 EE OO PF PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -42,7 +42,7 @@ D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
 D drivingstatesfsm.ads	20221118093148 4883f507 drivingstatesfsm%s
-D drivingstatesfsm.adb	20221118093150 03956e78 drivingstatesfsm%b
+D drivingstatesfsm.adb	20221118120124 24f0932d drivingstatesfsm%b
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -97,8 +97,11 @@ D s-tasinf.ads		20220915114514 801abd01 system.task_info%s
 D s-taspri.ads		20220915114514 37f162b4 system.task_primitives%s
 D s-taskin.ads		20220915114514 989d56fd system.tasking%s
 D s-taprob.ads		20220915114514 c8fc0753 system.tasking.protected_objects%s
+D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
+D taskact.ads		20221118101710 dec11651 taskact%s
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z s b [canmoveforward drivingstatesfsm__states 9 16 none]
@@ -117,31 +120,31 @@ G c Z s b [states__updatestateP drivingstatesfsm 14 7 none]
 G c Z s b [states__unstuckN drivingstatesfsm 18 7 none]
 G c Z s b [states__unstuckP drivingstatesfsm 18 7 none]
 G c Z s s [statesTVIP drivingstatesfsm 7 4 none]
-G r p none [unstuck drivingstatesfsm__states 18 17 none] [setdirection mymotordriver__motordriver 45 17 none]
+G r c none [unstuck drivingstatesfsm__states 18 17 none] [drive taskact 8 14 none]
 X 13 drivingstatesfsm.ads
-3K9*DrivingStatesFSM 22l5 22e21 14|1b14 62l5 62t21
-5E9*DrivState 5e76 14r103 14|34r103
-5n23*Stopping{5E9} 14|43r20
-5n33*DriveForward{5E9} 14|37r20
-5n47*Rleft{5E9} 14|39r20
-5n54*Rright{5E9} 14|41r20
+3K9*DrivingStatesFSM 22l5 22e21 14|3b14 62l5 62t21
+5E9*DrivState 5e76 14r103 14|36r103
+5n23*Stopping{5E9} 14|45r20
+5n33*DriveForward{5E9} 14|39r20
+5n47*Rleft{5E9} 14|41r20
+5n54*Rright{5E9} 14|43r20
 5n62*DriveBackward{5E9}
-7w14*States 14|3b19 59l8 59t14
-9V16 CanMoveForward{boolean} 9>32 14|5b16 12l11 12t25 36s13
-9i32 SensorFront{integer} 14|5b32 7r13
-10V16 CanRotLeft{boolean} 10>28 10>50 10>73 14|14b16 21l11 21t21 38s16
-10i28 SensorLeft{integer} 14|14b28 16r34
-10i50 SensorRight{integer} 14|14b50 16r47
-10i73 SensorFront{integer} 14|14b73 16r13
-11V16 CanRotRight{boolean} 11>29 11>51 11>74 14|23b16 30l11 30t22 40s16
-11i29 SensorLeft{integer} 14|23b29 25r48
-11i51 SensorRight{integer} 14|23b51 25r34
-11i74 SensorFront{integer} 14|23b74 25r13
-14V16 UpdateState{5E9} 14>28 14>51 14>73 14|34b16 45l11 45t22
-14i28 SensorFront{integer} 14|34b28 36r28 38r52 40r53
-14i51 SensorLeft{integer} 14|34b51 38r27 40r28
-14i73 SensorRight{integer} 14|34b73 38r39 40r40
-18U17 Unstuck 14|47b17 57l11 57t18
+7w14*States 14|5b19 59l8 59t14
+9V16 CanMoveForward{boolean} 9>32 14|7b16 14l11 14t25 38s13
+9i32 SensorFront{integer} 14|7b32 9r13
+10V16 CanRotLeft{boolean} 10>28 10>50 10>73 14|16b16 23l11 23t21 40s16
+10i28 SensorLeft{integer} 14|16b28 18r34
+10i50 SensorRight{integer} 14|16b50 18r47
+10i73 SensorFront{integer} 14|16b73 18r13
+11V16 CanRotRight{boolean} 11>29 11>51 11>74 14|25b16 32l11 32t22 42s16
+11i29 SensorLeft{integer} 14|25b29 27r48
+11i51 SensorRight{integer} 14|25b51 27r34
+11i74 SensorFront{integer} 14|25b74 27r13
+14V16 UpdateState{5E9} 14>28 14>51 14>73 14|36b16 47l11 47t22
+14i28 SensorFront{integer} 14|36b28 38r28 40r52 42r53
+14i51 SensorLeft{integer} 14|36b51 40r27 42r28
+14i73 SensorRight{integer} 14|36b73 40r39 42r40
+18U17 Unstuck 14|49b17 57l11 57t18
 X 16 hal-gpio.ads
 47h9*GPIO_Point
 X 17 hal-i2c.ads
@@ -152,13 +155,16 @@ X 19 hal-uart.ads
 48h9*UART_Port
 X 23 mymotordriver.ads
 3K9*MyMotorDriver 13|1w6 1r25 23|51e18
-5n52*RotateLeft{5E9} 14|49r36 50r36 51r36 52r36 53r36 54r36 55r36 56r36
-39w14*MotorDriver 14|49r10 50r10 51r10 52r10 53r10 54r10 55r10 56r10
-45U17 SetDirection 14|49s22 50s22 51s22 52s22 53s22 54s22 55s22 56s22
+5n52*RotateLeft{5E9} 14|51r25 52r25 53r25 54r25 55r25 56r25
 X 51 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
 X 59 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
 X 67 s-taskin.ads
 398V13*Get_Sec_Stack{59|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 70 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+X 73 taskact.ads
+3K9*TaskAct 14|1w6 51r10 52r10 53r10 54r10 55r10 56r10 73|11e12
+8U14*Drive 14|51s18 52s18 53s18 54s18 55s18 56s18
 

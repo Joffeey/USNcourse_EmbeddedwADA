@@ -20,7 +20,7 @@ RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U taskact%b		taskact.adb		b3bc2f00 OO PK
+U taskact%b		taskact.adb		eb90e6f0 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -116,7 +116,7 @@ D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
 D taskact.ads		20221118101710 dec11651 taskact%s
-D taskact.adb		20221118094640 d4d99067 taskact%b
+D taskact.adb		20221118122540 8cf55997 taskact%b
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
 G c b b b [b taskact 5 1 none]

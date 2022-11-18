@@ -273,12 +273,12 @@ package ada_main is
    --  mybrain%b
    --  mymotordriver%s
    --  mymotordriver%b
+   --  taskact%s
+   --  taskact%b
    --  drivingstatesfsm%s
    --  drivingstatesfsm%b
    --  controllerdrivingstates%s
    --  controllerdrivingstates%b
-   --  taskact%s
-   --  taskact%b
    --  taskthink%s
    --  taskthink%b
    --  ultrasonic%s

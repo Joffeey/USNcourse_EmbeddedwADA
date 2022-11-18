@@ -23,7 +23,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__main.adb		23a3cc10 OO PK IL
+U ada_main%b		b__main.adb		d6f2b3d7 OO PK IL
 Z system%s		system.ads		system.ali
 
 U ada_main%s		b__main.ads		f83fdd3d EE NE OO PK IL
@@ -31,8 +31,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__main.ads		20221118101712 8d59ea92 ada_main%s
-D b__main.adb		20221118101712 aefa2682 ada_main%b
+D b__main.ads		20221118122542 8d59ea92 ada_main%s
+D b__main.adb		20221118122542 5bab5945 ada_main%b
 D system.ads		20220915114514 ad54c63c system%s
 D s-parame.ads		20220915114514 8e90778f system.parameters%s
 D s-secsta.ads		20220915114508 56a2861c system.secondary_stack%s
@@ -97,9 +97,9 @@ X 2 b__main.adb
 51i4 E245{short_integer} 51m46 51r46 236m7 236r15
 52i4 E247{short_integer} 52m46 52r46 238m7 238r15
 53i4 E234{short_integer} 53m46 53r46 240m7 240r15
-54i4 E263{short_integer} 54m46 54r46 242m7 242r15
-55i4 E261{short_integer} 55m46 55r46 243m7 243r15
-56i4 E123{short_integer} 56m46 56r46 246m7 246r15
+54i4 E123{short_integer} 54m46 54r46 243m7 243r15
+55i4 E263{short_integer} 55m46 55r46 245m7 245r15
+56i4 E261{short_integer} 56m46 56r46 246m7 246r15
 57i4 E259{short_integer} 57m46 57r46 249m7 249r15
 58i4 E249{short_integer} 58m46 58r46 250m7 250r15
 59i4 E251{short_integer} 59m46 59r46 251m7 251r15

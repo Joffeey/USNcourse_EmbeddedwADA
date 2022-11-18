@@ -51,9 +51,9 @@ package body ada_main is
    E245 : Short_Integer; pragma Import (Ada, E245, "microbit__timehighspeed_E");
    E247 : Short_Integer; pragma Import (Ada, E247, "mybrain_E");
    E234 : Short_Integer; pragma Import (Ada, E234, "mymotordriver_E");
+   E123 : Short_Integer; pragma Import (Ada, E123, "taskact_E");
    E263 : Short_Integer; pragma Import (Ada, E263, "drivingstatesfsm_E");
    E261 : Short_Integer; pragma Import (Ada, E261, "controllerdrivingstates_E");
-   E123 : Short_Integer; pragma Import (Ada, E123, "taskact_E");
    E259 : Short_Integer; pragma Import (Ada, E259, "taskthink_E");
    E249 : Short_Integer; pragma Import (Ada, E249, "ultrasonic_E");
    E251 : Short_Integer; pragma Import (Ada, E251, "wirelessradio_E");
@@ -238,12 +238,12 @@ package body ada_main is
       E247 := E247 + 1;
       Mymotordriver'Elab_Spec;
       E234 := E234 + 1;
-      Drivingstatesfsm'Elab_Spec;
-      E263 := E263 + 1;
-      E261 := E261 + 1;
       Taskact'Elab_Spec;
       Taskact'Elab_Body;
       E123 := E123 + 1;
+      Drivingstatesfsm'Elab_Spec;
+      E263 := E263 + 1;
+      E261 := E261 + 1;
       Taskthink'Elab_Spec;
       Taskthink'Elab_Body;
       E259 := E259 + 1;
@@ -279,9 +279,9 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   C:\Ada\CarFinal\obj\mybrain.o
    --   C:\Ada\CarFinal\obj\mymotordriver.o
+   --   C:\Ada\CarFinal\obj\taskact.o
    --   C:\Ada\CarFinal\obj\DrivingStatesFSM.o
    --   C:\Ada\CarFinal\obj\controllerdrivingstates.o
-   --   C:\Ada\CarFinal\obj\taskact.o
    --   C:\Ada\CarFinal\obj\taskthink.o
    --   C:\Ada\CarFinal\obj\ultrasonic.o
    --   C:\Ada\CarFinal\obj\WirelessRadio.o
