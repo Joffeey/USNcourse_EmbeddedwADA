@@ -26,7 +26,9 @@ The program is designed with three different tasks:
 2. Think
 3. Act
 
-We have implemented two Finite State Machines in our task captured in the images below. 
+We have implemented two Finite State Machines in our task captured in the images below. The image below contains the Finite State Machine diagram for when the car is remote controlled. 
 ![FSMD Remote](https://user-images.githubusercontent.com/71882170/202713124-6c5260a2-1fd9-4d98-b5ca-45639be11564.png)
+The image below contains the Finite State Machine diagram for when the car is in autonomous driving. 
 ![FSMD Autonomous](https://user-images.githubusercontent.com/71882170/202713153-0b65d389-335c-4917-99d8-62cce276c20d.png)
+The image below contains a diagram that illustrates how we switch between the Finite State Machines with the help of the second Micro:bit
 ![Controller diagram](https://user-images.githubusercontent.com/71882170/202712847-7c4a4300-f5ed-4e31-912a-e912c42836a8.png)
