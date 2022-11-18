@@ -27,5 +27,5 @@ The program is designed with three different tasks:
 3. Act
 
 We have implemented two Finite State Machines in our task captured in the images below. 
-![Controller_diagram](Images/Controller diagram.png)
+![Controller_diagram](Images/Controller_diagram.png)
 ![Controller diagram](https://user-images.githubusercontent.com/71882170/202712847-7c4a4300-f5ed-4e31-912a-e912c42836a8.png)
