@@ -36,6 +36,7 @@ with MicroBit.DisplayRT.Symbols;
 with MicroBit.Accelerometer;
 with MicroBit.Console; use MicroBit.Console;
 with MicroBit.Buttons; use MicroBit.Buttons;
+with MicroBit.Radio; use MicroBit.Radio;
 
 
 with HAL; use HAL;
@@ -63,7 +64,7 @@ begin
                Protocol => TxData.Protocol);
 
    Radio.StartReceiving;
-   --Put_Line(Radio.State); -- this should report Status: 3, meaning in RX mode
+  --Put_Line(Radio.State); -- this should report Status: 3, meaning in RX mode
 
 
    loop
@@ -145,6 +146,7 @@ begin
 
       if MicroBit.Buttons.State (Button_B) = Pressed then
          TxData.Payload(12) := TxData.Payload(12) or 2#010#; --btn B is pressed (and potentially btn A as well, hence the or)
+
       end if;
 
       if MicroBit.Buttons.State (Logo) = Pressed then
