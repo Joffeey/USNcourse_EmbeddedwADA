@@ -8,11 +8,12 @@ C:\git-repos\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
 [BOUND OBJECT FILES]
 C:\git-repos\TBA\obj\mybrain.o
 C:\git-repos\TBA\obj\mymotordriver.o
-C:\git-repos\TBA\obj\drivingstates.o
-C:\git-repos\TBA\obj\randomdirection.o
+C:\git-repos\TBA\obj\DrivingStatesFSM.o
+C:\git-repos\TBA\obj\controllerdrivingstates.o
 C:\git-repos\TBA\obj\taskact.o
 C:\git-repos\TBA\obj\taskthink.o
 C:\git-repos\TBA\obj\ultrasonic.o
+C:\git-repos\TBA\obj\wirelessradio.o
 C:\git-repos\TBA\obj\tasksense.o
 C:\git-repos\TBA\obj\mycontroller.o
 C:\git-repos\TBA\obj\main.o

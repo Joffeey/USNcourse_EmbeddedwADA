@@ -27,9 +27,9 @@ package body ada_main is
    E191 : Short_Integer; pragma Import (Ada, E191, "hal__i2c_E");
    E184 : Short_Integer; pragma Import (Ada, E184, "hal__spi_E");
    E195 : Short_Integer; pragma Import (Ada, E195, "hal__uart_E");
+   E266 : Short_Integer; pragma Import (Ada, E266, "lsm303agr_E");
    E204 : Short_Integer; pragma Import (Ada, E204, "memory_barriers_E");
    E202 : Short_Integer; pragma Import (Ada, E202, "cortex_m__nvic_E");
-   E255 : Short_Integer; pragma Import (Ada, E255, "mybrain_E");
    E221 : Short_Integer; pragma Import (Ada, E221, "nrf__events_E");
    E150 : Short_Integer; pragma Import (Ada, E150, "nrf__gpio_E");
    E223 : Short_Integer; pragma Import (Ada, E223, "nrf__gpio__tasks_and_events_E");
@@ -38,21 +38,27 @@ package body ada_main is
    E182 : Short_Integer; pragma Import (Ada, E182, "nrf__spi_master_E");
    E208 : Short_Integer; pragma Import (Ada, E208, "nrf__tasks_E");
    E206 : Short_Integer; pragma Import (Ada, E206, "nrf__adc_E");
-   E253 : Short_Integer; pragma Import (Ada, E253, "nrf__clock_E");
+   E256 : Short_Integer; pragma Import (Ada, E256, "nrf__clock_E");
    E227 : Short_Integer; pragma Import (Ada, E227, "nrf__ppi_E");
+   E254 : Short_Integer; pragma Import (Ada, E254, "nrf__radio_E");
    E186 : Short_Integer; pragma Import (Ada, E186, "nrf__timers_E");
    E189 : Short_Integer; pragma Import (Ada, E189, "nrf__twi_E");
    E193 : Short_Integer; pragma Import (Ada, E193, "nrf__uart_E");
    E140 : Short_Integer; pragma Import (Ada, E140, "nrf__device_E");
    E197 : Short_Integer; pragma Import (Ada, E197, "microbit__console_E");
+   E270 : Short_Integer; pragma Import (Ada, E270, "microbit__i2c_E");
+   E268 : Short_Integer; pragma Import (Ada, E268, "microbit__accelerometer_E");
    E199 : Short_Integer; pragma Import (Ada, E199, "microbit__iosfortasking_E");
-   E251 : Short_Integer; pragma Import (Ada, E251, "microbit__timehighspeed_E");
+   E251 : Short_Integer; pragma Import (Ada, E251, "microbit__radio_E");
+   E258 : Short_Integer; pragma Import (Ada, E258, "microbit__timehighspeed_E");
+   E260 : Short_Integer; pragma Import (Ada, E260, "mybrain_E");
    E238 : Short_Integer; pragma Import (Ada, E238, "mymotordriver_E");
-   E262 : Short_Integer; pragma Import (Ada, E262, "drivingstates_E");
-   E264 : Short_Integer; pragma Import (Ada, E264, "randomdirection_E");
+   E276 : Short_Integer; pragma Import (Ada, E276, "drivingstatesfsm_E");
+   E274 : Short_Integer; pragma Import (Ada, E274, "controllerdrivingstates_E");
    E123 : Short_Integer; pragma Import (Ada, E123, "taskact_E");
-   E259 : Short_Integer; pragma Import (Ada, E259, "taskthink_E");
-   E257 : Short_Integer; pragma Import (Ada, E257, "ultrasonic_E");
+   E272 : Short_Integer; pragma Import (Ada, E272, "taskthink_E");
+   E262 : Short_Integer; pragma Import (Ada, E262, "ultrasonic_E");
+   E264 : Short_Integer; pragma Import (Ada, E264, "wirelessradio_E");
    E247 : Short_Integer; pragma Import (Ada, E247, "tasksense_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 4) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -190,10 +196,11 @@ package body ada_main is
       E184 := E184 + 1;
       HAL.UART'ELAB_SPEC;
       E195 := E195 + 1;
+      LSM303AGR'ELAB_SPEC;
+      LSM303AGR'ELAB_BODY;
+      E266 := E266 + 1;
       E204 := E204 + 1;
       E202 := E202 + 1;
-      Mybrain'Elab_Spec;
-      E255 := E255 + 1;
       E221 := E221 + 1;
       Nrf.Gpio'Elab_Spec;
       Nrf.Gpio'Elab_Body;
@@ -206,8 +213,9 @@ package body ada_main is
       E182 := E182 + 1;
       E208 := E208 + 1;
       E206 := E206 + 1;
-      E253 := E253 + 1;
+      E256 := E256 + 1;
       E227 := E227 + 1;
+      E254 := E254 + 1;
       Nrf.Timers'Elab_Spec;
       Nrf.Timers'Elab_Body;
       E186 := E186 + 1;
@@ -222,23 +230,31 @@ package body ada_main is
       E140 := E140 + 1;
       Microbit.Console'Elab_Body;
       E197 := E197 + 1;
+      E270 := E270 + 1;
+      Microbit.Accelerometer'Elab_Body;
+      E268 := E268 + 1;
       Microbit.Iosfortasking'Elab_Spec;
       Microbit.Iosfortasking'Elab_Body;
       E199 := E199 + 1;
-      Microbit.Timehighspeed'Elab_Body;
+      Microbit.Radio'Elab_Spec;
       E251 := E251 + 1;
+      Microbit.Timehighspeed'Elab_Body;
+      E258 := E258 + 1;
+      Mybrain'Elab_Spec;
+      E260 := E260 + 1;
       Mymotordriver'Elab_Spec;
       E238 := E238 + 1;
-      Drivingstates'Elab_Spec;
-      E262 := E262 + 1;
-      E264 := E264 + 1;
+      Drivingstatesfsm'Elab_Spec;
+      E276 := E276 + 1;
+      E274 := E274 + 1;
       Taskact'Elab_Spec;
       Taskact'Elab_Body;
       E123 := E123 + 1;
       Taskthink'Elab_Spec;
       Taskthink'Elab_Body;
-      E259 := E259 + 1;
-      E257 := E257 + 1;
+      E272 := E272 + 1;
+      E262 := E262 + 1;
+      E264 := E264 + 1;
       Tasksense'Elab_Spec;
       Tasksense'Elab_Body;
       E247 := E247 + 1;
@@ -269,11 +285,12 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   C:\git-repos\TBA\obj\mybrain.o
    --   C:\git-repos\TBA\obj\mymotordriver.o
-   --   C:\git-repos\TBA\obj\drivingstates.o
-   --   C:\git-repos\TBA\obj\randomdirection.o
+   --   C:\git-repos\TBA\obj\DrivingStatesFSM.o
+   --   C:\git-repos\TBA\obj\controllerdrivingstates.o
    --   C:\git-repos\TBA\obj\taskact.o
    --   C:\git-repos\TBA\obj\taskthink.o
    --   C:\git-repos\TBA\obj\ultrasonic.o
+   --   C:\git-repos\TBA\obj\wirelessradio.o
    --   C:\git-repos\TBA\obj\tasksense.o
    --   C:\git-repos\TBA\obj\mycontroller.o
    --   C:\git-repos\TBA\obj\main.o

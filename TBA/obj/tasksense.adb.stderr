@@ -1,1 +1,1 @@
-tasksense.adb:35:33: warning: "HighestCPU_Sense" may be referenced before it has a value [enabled by default]
+tasksense.adb:44:33: warning: "HighestCPU_Sense" may be referenced before it has a value [enabled by default]

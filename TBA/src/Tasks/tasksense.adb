@@ -1,7 +1,10 @@
 With Ada.Real_Time; use Ada.Real_Time;
 With Ultrasonic; -- use Ultrasonic;
+with WirelessRadio;
+with MicroBit.Radio; use MicroBit.Radio;
 with Ada.Execution_Time; use Ada.Execution_Time;
 with Ada.Text_IO; use Ada.Text_IO;
+
 package body TaskSense is
 
     task body sense is
@@ -20,6 +23,9 @@ package body TaskSense is
       Ultrasonic1.Setup(10,11);
       Ultrasonic2.Setup(5,19);
       Ultrasonic3.Setup(9,8);
+      
+      WirelessRadio.SetupRadio;
+      WirelessRadio.EnableReceiving;
       loop
          Time_Now_Stopwatch_Sense := Clock;
          Time_Now_CPU_Sense := Clock;
@@ -30,6 +36,9 @@ package body TaskSense is
          Brain.SetMeasurementSensor2(Integer(Ultrasonic2.Read));
          Brain.SetMeasurementSensor3(Integer(Ultrasonic3.Read));
          
+         while DataReady loop
+            brain.SetRadioSensor(Receive);
+         end loop;
          Elapsed_CPU_Sense := (Clock - Time_Now_CPU_Sense);
          Elapsed_Stopwatch_Sense :=  (Clock - Time_Now_Stopwatch_Sense);
          if Elapsed_CPU_Sense > HighestCPU_Sense then

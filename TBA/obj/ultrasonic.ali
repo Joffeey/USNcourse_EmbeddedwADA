@@ -12,7 +12,7 @@ P DB LC TF  SS ZX
 RN
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U ultrasonic%b		ultrasonic.adb		0fb0bbaf NE OO PK GE
+U ultrasonic%b		ultrasonic.adb		7e0a6dda NE OO PK GE
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W hal%s			hal.ads			hal.ali
 W microbit%s		microbit.ads		microbit.ali
@@ -95,11 +95,11 @@ D s-taskin.ads		20220915125814 989d56fd system.tasking%s
 D s-taprob.ads		20220915125814 c8fc0753 system.tasking.protected_objects%s
 D s-traent.ads		20220915125814 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915125812 2b077493 system.unsigned_types%s
-D ultrasonic.ads	20221112081924 a71dfa55 ultrasonic%s
-D ultrasonic.adb	20221115130820 3856612e ultrasonic%b
+D ultrasonic.ads	20221118101228 a71dfa55 ultrasonic%s
+D ultrasonic.adb	20221118101228 49ecb75b ultrasonic%b
 D unchconv.ads		20220915125812 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z s b [ultrasonic standard 4 9 none]
+G c Z s b [ultrasonic standard 5 9 none]
 X 13 hal.ads
 34K9*HAL 166e8 71|5w6 5r15
 X 14 hal-gpio.ads
@@ -114,7 +114,7 @@ X 19 microbit.ads
 58K9*MicroBit 115e13 70|1r6 1r34 71|1r6 1r34 2r6 2r34 4r5
 X 20 microbit-iosfortasking.ads
 5K18*IOsForTasking 93e27 70|1w15 1r43 71|2w15 2r43
-7I9*Pin_Id<short_short_integer> 70|12r35 12r54 71|12r35 12r54
+7I9*Pin_Id<short_short_integer> 70|13r35 13r54 71|12r35 12r54
 22U14*Set 71|15s7
 25V13*Set{boolean} 71|16s17
 47a1*Points(24|66R9) 71|18r29 19r26
@@ -146,20 +146,20 @@ X 58 s-secsta.ads
 X 66 s-taskin.ads
 398V13*Get_Sec_Stack{58|46P9} 399i<c,__gnat_get_secondary_stack>22
 X 70 ultrasonic.ads
-4k9*Ultrasonic 17l5 17e15 71|6b14 79l5 79t15
-6I9*Distance_cm<short_integer> 8r25 16r67 71|10r13 22r25 63r67 77r14
-8V13*Read{6I9} 71|22b13 31l8 31t12
-10U14*SendTriggerPulse 71|25s7 33b14 44l11 44t27
-12U14*Setup 12>21 12>43 71|12b14 20l8 20t13
-12i21 trigger_pin{20|7I9} 71|12b21 15r11 18r36
-12i43 echo_pin{20|7I9} 71|12b43 16r21 19r33
-14V13*WaitForEcho{integer} 71|26s23 46b13 61l8 61t19
-16V13*ConvertEchoToDistance{6I9} 16>36 71|27s17 63b13 78l8 78t29
-16i36 echo_time_us{integer} 71|63b36 67r22
+5k9*Ultrasonic 18l5 18e15 71|6b14 79l5 79t15
+7I9*Distance_cm<short_integer> 9r25 17r67 71|10r13 22r25 63r67 77r14
+9V13*Read{7I9} 71|22b13 31l8 31t12
+11U14*SendTriggerPulse 71|25s7 33b14 44l11 44t27
+13U14*Setup 13>21 13>43 71|12b14 20l8 20t13
+13i21 trigger_pin{20|7I9} 71|12b21 15r11 18r36
+13i43 echo_pin{20|7I9} 71|12b43 16r21 19r33
+15V13*WaitForEcho{integer} 71|26s23 46b13 61l8 61t19
+17V13*ConvertEchoToDistance{7I9} 17>36 71|27s17 63b13 78l8 78t29
+17i36 echo_time_us{integer} 71|63b36 67r22
 X 71 ultrasonic.adb
 8i4 trigger_pin_device{integer} 18m7 35r30 43r30
 9i4 echo_pin_device{integer} 19m7 50r34 55r34
-10i4 result{70|6I9} 27m7 30r14
+10i4 result{70|7I9} 27m7 30r14
 13b7 dummy{boolean} 16m7
 23i7 echo_time_us{integer} 26m7 27r39
 47i7 delayCounter{integer} 57m10 57r26 60r14

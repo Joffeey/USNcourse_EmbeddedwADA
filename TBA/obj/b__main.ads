@@ -30,7 +30,6 @@ package ada_main is
    --  interfaces%s
    --  system%s
    --  ada.io_exceptions%s
-   --  ada.numerics%s
    --  ada.strings%s
    --  gnat%s
    --  interfaces.nrf52%s
@@ -43,6 +42,7 @@ package ada_main is
    --  system.bb.parameters%s
    --  system.exceptions%s
    --  system.img_int%s
+   --  system.img_lli%s
    --  system.machine_code%s
    --  system.parameters%s
    --  system.parameters%b
@@ -232,12 +232,12 @@ package ada_main is
    --  hal.i2c%s
    --  hal.spi%s
    --  hal.uart%s
+   --  lsm303agr%s
+   --  lsm303agr%b
    --  memory_barriers%s
    --  memory_barriers%b
    --  cortex_m.nvic%s
    --  cortex_m.nvic%b
-   --  mybrain%s
-   --  mybrain%b
    --  nrf%s
    --  nrf.events%s
    --  nrf.events%b
@@ -259,6 +259,8 @@ package ada_main is
    --  nrf.clock%b
    --  nrf.ppi%s
    --  nrf.ppi%b
+   --  nrf.radio%s
+   --  nrf.radio%b
    --  nrf.timers%s
    --  nrf.timers%b
    --  nrf.twi%s
@@ -270,22 +272,32 @@ package ada_main is
    --  microbit%s
    --  microbit.console%s
    --  microbit.console%b
+   --  microbit.i2c%s
+   --  microbit.i2c%b
+   --  microbit.accelerometer%s
+   --  microbit.accelerometer%b
    --  microbit.iosfortasking%s
    --  microbit.iosfortasking%b
+   --  microbit.radio%s
+   --  microbit.radio%b
    --  microbit.timehighspeed%s
    --  microbit.timehighspeed%b
+   --  mybrain%s
+   --  mybrain%b
    --  mymotordriver%s
    --  mymotordriver%b
-   --  drivingstates%s
-   --  drivingstates%b
-   --  randomdirection%s
-   --  randomdirection%b
+   --  drivingstatesfsm%s
+   --  drivingstatesfsm%b
+   --  controllerdrivingstates%s
+   --  controllerdrivingstates%b
    --  taskact%s
    --  taskact%b
    --  taskthink%s
    --  taskthink%b
    --  ultrasonic%s
    --  ultrasonic%b
+   --  wirelessradio%s
+   --  wirelessradio%b
    --  tasksense%s
    --  tasksense%b
    --  mycontroller%s

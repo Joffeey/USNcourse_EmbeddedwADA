@@ -33,7 +33,7 @@ package body Ultrasonic is
    procedure SendTriggerPulse is
    begin
       GPIO_Periph.OUT_k.Arr (trigger_pin_device) := high;
-      Delay_Us(15); -- Not 10 us, more about 11.4us (10 us+ required by ultrasonic spec)
+      Delay_Us(20); -- Not 10 us, more about 11.4us (10 us+ required by ultrasonic spec)
                        --Higher delays become more accurate
                       -- If you use direct pin assignment setting a pin once before the loop (to be output, see init)
                       -- and using GPIO_Periph.OUT_k.Arr (1) := high or low (use With NRF_SVD.GPIO; use NRF_SVD.GPIO;)

@@ -2,7 +2,7 @@ with MyMotorDriver; use MyMotorDriver;
 
 package TaskAct is
 
-   task Act with Priority=> 2;
+   task Act with Priority=> 1;
 
    procedure SetupMotors;    
    procedure Drive (direction : Directions);

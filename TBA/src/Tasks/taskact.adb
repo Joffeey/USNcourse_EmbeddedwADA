@@ -1,6 +1,5 @@
 With Ada.Real_Time; use Ada.Real_Time;
 With MicroBit.Console; use MicroBit.Console;
---Important: use Microbit.IOsForTasking for controlling pins as the timer used there is implemented as an protected object
 With MicroBit.IOsForTasking; use MicroBit.IOsForTasking;
 with Ada.Execution_Time; use Ada.Execution_Time;
 
@@ -8,24 +7,22 @@ package body TaskAct is
 
    task body act is
       myClock : Time;
+      CurrentDirection : Directions;
       
       Time_Now_Stopwatch_Act : Time;
       Time_Now_CPU_Act : CPU_Time;
       Elapsed_Stopwatch_Act : Time_Span;
       Elapsed_CPU_Act : Time_Span;
       HighestCPU_Act : Time_Span;
-      
    begin
-      
       SetupMotors;
-      
       loop
-         
          Time_Now_Stopwatch_Act := Clock;
          Time_Now_CPU_Act := Clock;
          
          myClock := Clock; -- Execution
-         Drive(MotorDriver.GetDirection); -- Execution
+         CurrentDirection := MotorDriver.GetDirection;
+         Drive(CurrentDirection);
          
          Elapsed_CPU_Act := (Clock - Time_Now_CPU_Act);
          Elapsed_Stopwatch_Act :=  (Clock - Time_Now_Stopwatch_Act);

@@ -23,7 +23,7 @@ RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U tasksense%b		tasksense.adb		2e6e4429 OO PK
+U tasksense%b		tasksense.adb		c985dad2 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.execution_time%s	a-exetim.adb		a-exetim.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -34,6 +34,7 @@ Z hal%s			hal.ads			hal.ali
 Z interfaces%s		interfac.ads		interfac.ali
 W microbit%s		microbit.ads		microbit.ali
 Z microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali  AD
+W microbit.radio%s	microbit-radio.adb	microbit-radio.ali  AD
 Z microbit.timehighspeed%s  microbit-timehighspeed.adb  microbit-timehighspeed.ali  AD
 Z mybrain%s		mybrain.adb		mybrain.ali  AD
 W nrf_svd%s		nrf_svd.ads		nrf_svd.ali
@@ -41,8 +42,9 @@ Z nrf_svd.gpio%s	nrf_svd-gpio.ads	nrf_svd-gpio.ali
 Z system.img_fixed_64%s	s-imfi64.ads		s-imfi64.ali
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 W ultrasonic%s		ultrasonic.adb		ultrasonic.ali  ED
+W wirelessradio%s	wirelessradio.adb	wirelessradio.ali  AD
 
-U tasksense%s		tasksense.ads		c0b8832a EE OO PK
+U tasksense%s		tasksense.ads		79071b53 EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W mybrain%s		mybrain.adb		mybrain.ali
 Z system%s		system.ads		system.ali
@@ -75,13 +77,17 @@ D hal-i2c.ads		20220922105756 0ed73138 hal.i2c%s
 D hal-spi.ads		20220922105756 fe139819 hal.spi%s
 D hal-uart.ads		20220922105756 d58316b4 hal.uart%s
 D interfac.ads		20220915125812 edec285f interfaces%s
+D lsm303agr.ads		20221114094556 08c05d69 lsm303agr%s
 D microbit.ads		20220922105756 3b54a3e8 microbit%s
+D microbit-accelerometer.ads  20221114094556 fc78b8ce microbit.accelerometer%s
 D microbit-iosfortasking.ads  20221114094556 7dfd8b70 microbit.iosfortasking%s
+D microbit-radio.ads	20221027102806 6901b417 microbit.radio%s
 D microbit-timehighspeed.ads  20221031113644 1d0073c3 microbit.timehighspeed%s
-D mybrain.ads		20221115130820 c835b0c6 mybrain%s
+D mybrain.ads		20221118101414 718a28bf mybrain%s
 D nrf.ads		20220922105754 74cf72f5 nrf%s
 D nrf-device.ads	20220922105754 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220922105754 ab6d4598 nrf.gpio%s
+D nrf-radio.ads		20221031113644 f28f290a nrf.radio%s
 D nrf-rtc.ads		20220922105754 36d88130 nrf.rtc%s
 D nrf-spi_master.ads	20220922105754 a8ff49a3 nrf.spi_master%s
 D nrf-timers.ads	20221027102806 15fa58e3 nrf.timers%s
@@ -132,49 +138,60 @@ D s-tasres.ads		20220915125814 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915125814 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915125814 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915125812 2b077493 system.unsigned_types%s
-D tasksense.ads		20221115130332 088d33ec tasksense%s
-D tasksense.adb		20221115152920 b1b478a6 tasksense%b
-D ultrasonic.ads	20221112081924 a71dfa55 ultrasonic%s
-D ultrasonic.adb	20221115130820 3856612e ultrasonic%b
+D tasksense.ads		20221118101818 088d33ec tasksense%s
+D tasksense.adb		20221118102234 2097b98a tasksense%b
+D ultrasonic.ads	20221118101228 a71dfa55 ultrasonic%s
+D ultrasonic.adb	20221118101228 49ecb75b ultrasonic%b
 D unchconv.ads		20220915125812 ca2f9e18 unchecked_conversion%s
+D wirelessradio.ads	20221118101228 1fc9ebc0 wirelessradio%s
 G a e
-G c b b b [b tasksense 5 1 none]
+G c b b b [b tasksense 8 1 none]
 G c Z s b [senseTK tasksense 5 9 none]
 G c Z s s [senseTKVIP tasksense 5 4 none]
-G r i none [b tasksense 5 1 none] [ultrasonic standard 4 9 none]
-G r c none [b tasksense 5 1 none] [set microbit__iosfortasking 22 14 none]
-G r c none [b tasksense 5 1 none] [set microbit__iosfortasking 25 13 none]
-G r c none [b tasksense 5 1 none] [delay_us microbit__timehighspeed 35 14 none]
-G r p none [b tasksense 5 1 none] [setmeasurementsensor1 mybrain__brain 9 17 none]
-G r p none [b tasksense 5 1 none] [setmeasurementsensor2 mybrain__brain 10 17 none]
-G r p none [b tasksense 5 1 none] [setmeasurementsensor3 mybrain__brain 11 17 none]
-G r i none [senseTK tasksense 5 9 none] [ultrasonic standard 4 9 none]
+G r i none [b tasksense 8 1 none] [ultrasonic standard 5 9 none]
+G r c none [b tasksense 8 1 none] [set microbit__iosfortasking 22 14 none]
+G r c none [b tasksense 8 1 none] [set microbit__iosfortasking 25 13 none]
+G r c none [b tasksense 8 1 none] [setupradio wirelessradio 11 14 none]
+G r c none [b tasksense 8 1 none] [enablereceiving wirelessradio 12 14 none]
+G r c none [b tasksense 8 1 none] [delay_us microbit__timehighspeed 35 14 none]
+G r p none [b tasksense 8 1 none] [setmeasurementsensor1 mybrain__brain 14 17 none]
+G r p none [b tasksense 8 1 none] [setmeasurementsensor2 mybrain__brain 15 17 none]
+G r p none [b tasksense 8 1 none] [setmeasurementsensor3 mybrain__brain 16 17 none]
+G r c none [b tasksense 8 1 none] [dataready microbit__radio 83 13 none]
+G r c none [b tasksense 8 1 none] [receive microbit__radio 85 13 none]
+G r p none [b tasksense 8 1 none] [setradiosensor mybrain__brain 17 17 none]
+G r i none [senseTK tasksense 5 9 none] [ultrasonic standard 5 9 none]
 G r c none [senseTK tasksense 5 9 none] [set microbit__iosfortasking 22 14 none]
 G r c none [senseTK tasksense 5 9 none] [set microbit__iosfortasking 25 13 none]
+G r c none [senseTK tasksense 5 9 none] [setupradio wirelessradio 11 14 none]
+G r c none [senseTK tasksense 5 9 none] [enablereceiving wirelessradio 12 14 none]
 G r c none [senseTK tasksense 5 9 none] [delay_us microbit__timehighspeed 35 14 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor1 mybrain__brain 9 17 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor2 mybrain__brain 10 17 none]
-G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor3 mybrain__brain 11 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor1 mybrain__brain 14 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor2 mybrain__brain 15 17 none]
+G r p none [senseTK tasksense 5 9 none] [setmeasurementsensor3 mybrain__brain 16 17 none]
+G r c none [senseTK tasksense 5 9 none] [dataready microbit__radio 83 13 none]
+G r c none [senseTK tasksense 5 9 none] [receive microbit__radio 85 13 none]
+G r p none [senseTK tasksense 5 9 none] [setradiosensor mybrain__brain 17 17 none]
 X 1 ada.ads
-16K9*Ada 20e8 81|1r6 1r25 3r6 3r30 4r6 4r23
+16K9*Ada 20e8 85|1r6 1r25 5r6 5r30 6r6 6r23
 X 3 a-exetim.ads
-19K13*Execution_Time 111e23 81|3w10 3r34
-23M9*CPU_Time<7|50M9> 81|14r28
-32V13*Clock{23M9} 81|25s32 33s32
-59V14*"-"{7|60I9}<7|75p13> 81|33s38
+19K13*Execution_Time 111e23 85|5w10 5r34
+23M9*CPU_Time<7|50M9> 85|17r28
+32V13*Clock{23M9} 85|31s32 42s32
+59V14*"-"{7|60I9}<7|75p13> 85|42s38
 X 7 a-reatim.ads
-40K13*Real_Time 181e18 81|1w10 1r29
-50M9*Time<53|46M9> 81|8r17 13r34
-60I9*Time_Span<53|81I9> 81|15r33 16r27 17r26
-67V13*Clock{50M9}<53|134p13> 81|24s38 28s21 34s39
-71V14*"+"{50M9} 81|41s30
-75V14*"-"{60I9} 81|34s45
-113V14*">"{boolean} 81|35r31
-118V13*To_Duration{duration} 81|37s65 38s71
-127V13*Milliseconds{60I9} 81|41s32
+40K13*Real_Time 181e18 85|1w10 1r29
+50M9*Time<57|46M9> 85|11r17 16r34
+60I9*Time_Span<57|81I9> 85|18r33 19r27 20r26
+67V13*Clock{50M9}<57|134p13> 85|30s38 34s21 43s39
+71V14*"+"{50M9} 85|50s30
+75V14*"-"{60I9} 85|43s45
+113V14*">"{boolean} 85|44r31
+118V13*To_Duration{duration} 85|46s65 47s71
+127V13*Milliseconds{60I9} 85|50s32
 X 15 a-textio.ads
-36K13*Text_IO 52e16 81|4w10 4r27
-46U14*Put_Line 81|37s13 38s13
+36K13*Text_IO 52e16 85|6w10 6r27
+46U14*Put_Line 85|46s13 47s13
 X 18 hal-gpio.ads
 47h9*GPIO_Point
 X 19 hal-i2c.ads
@@ -185,42 +202,53 @@ X 21 hal-uart.ads
 48h9*UART_Port
 X 22 interfac.ads
 55I9*Integer_64<long_long_integer>
-X 26 mybrain.ads
-1K9*MyBrain 19e12 80|1w6 1r19
-3w14*Brain 81|29r10 30r10 31r10
-9U17 SetMeasurementSensor1 81|29s16
-10U17 SetMeasurementSensor2 81|30s16
-11U17 SetMeasurementSensor3 81|31s16
-X 43 s-arit64.ads
+X 24 microbit.ads
+58K9*MicroBit 115e13 85|4r6 4r26
+X 27 microbit-radio.ads
+56K18*Radio 106e19 85|4w15 4r35
+83V13*DataReady{boolean} 85|39s16
+85V13*Receive{67R12} 85|40s34
+X 29 mybrain.ads
+5K9*MyBrain 26e12 84|1w6 1r19
+7w14*Brain 85|35r10 36r10 37r10 40r13
+14U17 SetMeasurementSensor1 85|35s16
+15U17 SetMeasurementSensor2 85|36s16
+16U17 SetMeasurementSensor3 85|37s16
+17U17 SetRadioSensor 85|40s19
+X 47 s-arit64.ads
 44I12*Int64{22|55I9}
 54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
-X 53 s-bbtime.ads
+X 57 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
-X 58 s-interr.ads
+X 62 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 66 s-secsta.ads
+X 70 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 74 s-taskin.ads
-398V13*Get_Sec_Stack{66|46P9} 399i<c,__gnat_get_secondary_stack>22
-X 77 s-tarest.ads
+X 78 s-taskin.ads
+398V13*Get_Sec_Stack{70|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 81 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
-X 80 tasksense.ads
-3K9*TaskSense 7l5 7e14 81|5b14 45l5 45t14
-5t9*Sense 81|7b15 43l8 43t13
-X 81 tasksense.adb
-8m7 myClock{7|50M9} 28m10 41r22
-9K15 Ultrasonic1[82|4] 20r7 29r46
-10K15 Ultrasonic2[82|4] 21r7 30r46
-11K15 Ultrasonic3[82|4] 22r7 31r46
-13m7 Time_Now_Stopwatch_Sense{7|50M9} 24m10 34r47
-14m7 Time_Now_CPU_Sense{3|23M9} 25m10 33r40
-15i7 Elapsed_Stopwatch_Sense{7|60I9} 34m10 38r84
-16i7 Elapsed_CPU_Sense{7|60I9} 33m10 35r13 36r33
-17i7 HighestCPU_Sense{7|60I9} 35r33 36m13 37r78
-X 82 ultrasonic.ads
-4k9*Ultrasonic 81|2w6 9r34 10r34 11r34 82|17e15
-6I9 Distance_cm<short_integer>
-8V13 Read{6I9[81|9]} 81|29s58[9] 30s58[10] 31s58[11]
-12U14 Setup 81|20s19[9] 21s19[10] 22s19[11]
+X 84 tasksense.ads
+3K9*TaskSense 7l5 7e14 85|8b14 54l5 54t14
+5t9*Sense 85|10b15 52l8 52t13
+X 85 tasksense.adb
+11m7 myClock{7|50M9} 34m10 50r22
+12K15 Ultrasonic1[86|5] 23r7 35r46
+13K15 Ultrasonic2[86|5] 24r7 36r46
+14K15 Ultrasonic3[86|5] 25r7 37r46
+16m7 Time_Now_Stopwatch_Sense{7|50M9} 30m10 43r47
+17m7 Time_Now_CPU_Sense{3|23M9} 31m10 42r40
+18i7 Elapsed_Stopwatch_Sense{7|60I9} 43m10 47r84
+19i7 Elapsed_CPU_Sense{7|60I9} 42m10 44r13 45r33
+20i7 HighestCPU_Sense{7|60I9} 44r33 45m13 46r78
+X 86 ultrasonic.ads
+5k9*Ultrasonic 85|2w6 12r34 13r34 14r34 86|18e15
+7I9 Distance_cm<short_integer>
+9V13 Read{7I9[85|12]} 85|35s58[12] 36s58[13] 37s58[14]
+13U14 Setup 85|23s19[12] 24s19[13] 25s19[14]
+X 89 wirelessradio.ads
+9K9*WirelessRadio 85|3w6 27r7 28r7 89|14e18
+11U14*SetupRadio 85|27s21
+12U14*EnableReceiving 85|28s21
 
