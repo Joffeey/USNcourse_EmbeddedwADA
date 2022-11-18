@@ -1,0 +1,255 @@
+V "GNAT Lib v2021"
+M P 1 W=b
+A -gnatA
+A --RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=hard
+A -mfpu=fpv4-sp-d16
+A -mcpu=cortex-m4
+A -g
+A -gnat2022
+A -g
+A -march=armv7e-m+fp
+P DB LC TF  SS ZX
+
+RN
+RV NO_DELAY
+RV STATIC_PRIORITIES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		314ad2ec NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W hal%s			hal.ads			hal.ali
+W lsm303agr%s		lsm303agr.adb		lsm303agr.ali
+W microbit%s		microbit.ads		microbit.ali
+W microbit.accelerometer%s  microbit-accelerometer.adb  microbit-accelerometer.ali
+W microbit.buttons%s	microbit-buttons.adb	microbit-buttons.ali
+W microbit.console%s	microbit-console.adb	microbit-console.ali
+W microbit.displayrt%s	microbit-displayrt.adb	microbit-displayrt.ali
+W microbit.displayrt.symbols%s  microbit-displayrt-symbols.adb  microbit-displayrt-symbols.ali
+W microbit.music%s	microbit-music.adb	microbit-music.ali
+W microbit.radio%s	microbit-radio.adb	microbit-radio.ali
+Z system%s		system.ads		system.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+D ada.ads		20220915123208 76789da1 ada%s
+D a-except.ads		20220915123212 946f3014 ada.exceptions%s
+D a-finali.ads		20220915123212 bf4f806b ada.finalization%s
+D a-interr.ads		20220915123220 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20220915123220 543e27b6 ada.interrupts.names%s
+D a-reatim.ads		20220915123220 cfe92427 ada.real_time%s
+D a-retide.ads		20220915123220 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20220915123210 119b8fb3 ada.streams%s
+D a-string.ads		20220915123212 90ac6797 ada.strings%s
+D a-sttebu.ads		20220915123212 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220915123212 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20220915123212 9eaa38c6 ada.tags%s
+D a-taside.ads		20220915123220 00e3a3f6 ada.task_identification%s
+D a-unccon.ads		20220915123208 0e9b276f ada.unchecked_conversion%s
+D hal.ads		20220915112902 2b42c80e hal%s
+D hal-gpio.ads		20220915112902 7f0c2ffe hal.gpio%s
+D hal-i2c.ads		20220915112902 0ed73138 hal.i2c%s
+D hal-spi.ads		20220915112902 fe139819 hal.spi%s
+D hal-uart.ads		20220915112902 d58316b4 hal.uart%s
+D interfac.ads		20220915123208 edec285f interfaces%s
+D lsm303agr.ads		20221109073838 08c05d69 lsm303agr%s
+D main.adb		20221117135000 f1f54921 main%b
+D microbit.ads		20220929121736 3b54a3e8 microbit%s
+D microbit-accelerometer.ads  20221109073838 fc78b8ce microbit.accelerometer%s
+D microbit-buttons.ads	20220915112900 d64914b0 microbit.buttons%s
+D microbit-console.ads	20220915112900 0bb00661 microbit.console%s
+D microbit-displayrt.ads  20220929121736 09bd049f microbit.displayrt%s
+D microbit-displayrt-symbols.ads  20220915112900 fabeec9e microbit.displayrt.symbols%s
+D microbit-iosfortasking.ads  20221109073838 7dfd8b70 microbit.iosfortasking%s
+D microbit-music.ads	20221109073838 9757dc84 microbit.music%s
+D microbit-radio.ads	20221027105610 6901b417 microbit.radio%s
+D nrf.ads		20220915112900 74cf72f5 nrf%s
+D nrf-device.ads	20220915112900 9c9916c4 nrf.device%s
+D nrf-gpio.ads		20220915112900 ab6d4598 nrf.gpio%s
+D nrf-radio.ads		20221031120916 f28f290a nrf.radio%s
+D nrf-rtc.ads		20220915112900 36d88130 nrf.rtc%s
+D nrf-spi_master.ads	20220915112900 a8ff49a3 nrf.spi_master%s
+D nrf-timers.ads	20221027105610 15fa58e3 nrf.timers%s
+D nrf-twi.ads		20220915112900 4881713f nrf.twi%s
+D nrf-uart.ads		20220915112900 9fa4b8b9 nrf.uart%s
+D nrf_svd.ads		20220915112900 87ba21d7 nrf_svd%s
+D nrf_svd-rtc.ads	20220915112900 57c7ffc8 nrf_svd.rtc%s
+D nrf_svd-spi.ads	20220915112900 6e2ffb69 nrf_svd.spi%s
+D nrf_svd-timer.ads	20220915112900 ba50db1c nrf_svd.timer%s
+D nrf_svd-twi.ads	20220915112900 68301534 nrf_svd.twi%s
+D nrf_svd-uart.ads	20220915112900 83bcebc8 nrf_svd.uart%s
+D system.ads		20220915123220 ad54c63c system%s
+D s-bb.ads		20220915123208 09e072ae system.bb%s
+D s-bbbopa.ads		20220915123220 f68efaf0 system.bb.board_parameters%s
+D s-bbbosu.ads		20220915123220 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20220915123220 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20220915123220 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20220915123218 9339744a system.bb.mcu_parameters%s
+D s-bbpara.ads		20220915123220 63167d1e system.bb.parameters%s
+D s-bbthre.ads		20220915123220 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20220915123220 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20220915123220 ad086247 system.bb.time%s
+D s-finmas.ads		20220915123214 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20220915123214 4ff27390 system.finalization_root%s
+D s-interr.ads		20220915123220 d74bd991 system.interrupts%s
+D s-multip.ads		20220915123220 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20220915123220 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20220915123220 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220915123220 229b14dd system.os_interface%s
+D s-parame.ads		20220915123218 8e90778f system.parameters%s
+D s-pooglo.ads		20220915123214 ede33ef8 system.pool_global%s
+D s-putima.ads		20220915123216 4e095881 system.put_images%s
+D s-secsta.ads		20220915123208 56a2861c system.secondary_stack%s
+D s-stalib.ads		20220915123216 472fbca8 system.standard_library%s
+D s-stoele.ads		20220915123208 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220915123208 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220915123216 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20220915123210 7bdda3fa system.stream_attributes%s
+D s-tasinf.ads		20220915123220 801abd01 system.task_info%s
+D s-taspri.ads		20220915123220 37f162b4 system.task_primitives%s
+D s-taskin.ads		20220915123220 989d56fd system.tasking%s
+D s-taprob.ads		20220915123220 c8fc0753 system.tasking.protected_objects%s
+D s-tasres.ads		20220915123220 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20220915123220 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20220915123216 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20220915123208 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20220915123216 1b7d22d2 system.wch_con%s
+D s-wchstw.ads		20220915123216 2d112c01 system.wch_stw%s
+D unchconv.ads		20220915123208 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [main standard 46 11 none]
+G r c none [main standard 46 11 none] [setup microbit__radio 69 14 none]
+G r c none [main standard 46 11 none] [startreceiving microbit__radio 75 14 none]
+G r c none [main standard 46 11 none] [acceldataraw microbit__accelerometer 36 13 none]
+G r c none [main standard 46 11 none] [convert lsm303agr 85 13 none]
+G r c none [main standard 46 11 none] [clear microbit__displayrt 42 14 none]
+G r c none [main standard 46 11 none] [left_arrow microbit__displayrt__symbols 37 14 none]
+G r c none [main standard 46 11 none] [right_arrow microbit__displayrt__symbols 38 14 none]
+G r c none [main standard 46 11 none] [up_arrow microbit__displayrt__symbols 39 14 none]
+G r c none [main standard 46 11 none] [down_arrow microbit__displayrt__symbols 40 14 none]
+G r c none [main standard 46 11 none] [heart microbit__displayrt__symbols 45 14 none]
+G r c none [main standard 46 11 none] [state microbit__buttons 37 13 none]
+G r c none [main standard 46 11 none] [transmit microbit__radio 87 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 22|43r6 43r25
+X 6 a-reatim.ads
+40K13*Real_Time 181e18 22|43w10 43r29
+50M9*Time<57|46M9> 22|60r14
+60I9*Time_Span<57|81I9>
+67V13*Clock{50M9}<57|134p13> 22|89s18
+71V14*"+"{50M9} 22|177s28
+127V13*Milliseconds{60I9} 22|177s30
+X 15 hal.ads
+34K9*HAL 166e8 22|42w6 42r15
+53M9*UInt8<20|68M9>
+X 16 hal-gpio.ads
+47h9*GPIO_Point
+X 17 hal-i2c.ads
+48h9*I2C_Port
+X 18 hal-spi.ads
+48h9*SPI_Port
+X 19 hal-uart.ads
+48h9*UART_Port
+X 20 interfac.ads
+68M9*Unsigned_8
+X 21 lsm303agr.ads
+36K9*LSM303AGR 184e14 22|32w6 32r21 102r11 103r11 104r11
+48I9*Axis_Data<short_integer> 22|62r12 102r56
+52m7*Low{15|53M9} 22|94r35 96r35 98r35 102r36 103r36 104r36
+53m7*High{15|53M9} 22|95r35 97r35 99r35 102r48 103r48 104r48
+60R12*All_Axes_Data_Raw 62e14 22|48r10
+61r7*X{51R9} 22|94r33 95r33 102r34 102r46
+61r10*Y{51R9} 22|96r33 97r33 103r34 103r46
+61r13*Z{51R9} 22|98r33 99r33 104r34 104r46
+85V13*Convert{48I9} 22|102s21 103s21 104s21
+X 22 main.adb
+46U11*Main 46b11 179l5 179t9
+48r4 Data{21|60R12} 92m7 94r28 95r28 96r28 97r28 98r28 99r28 102r29 102r41
+. 103r29 103r41 104r29 104r41
+49a4 Jump{30|44A9}
+52a4 My_Little_Melody{30|44A9}
+59N4 Threshold 112r14 121r18 130r17 139r18
+60m4 MyClock{6|50M9} 89m7 177r20
+61r4 TxData{31|67R12} 65m4 66m4 67m4 68m4 71r26 72r27 73r25 74r28 94m7 95m7
+. 96m7 97m7 98m7 99m7 115m10 116m10 117m10 118m10 119m10 124m10 125m10 126m10
+. 127m10 128m10 133m10 134m10 135m10 136m10 137m10 142m10 143m10 144m10 145m10
+. 146m10 151m10 152m10 153m10 154m10 155m10 159m7 162m10 166m10 166r32 171m11
+. 171r33 174r22
+62i4 X{21|48I9} 102m7 112r10 121r13
+62i6 Y{21|48I9} 103m7 130r13 139r13
+62i8 Z{21|48I9} 104m7
+X 23 microbit.ads
+58K9*MicroBit 22|34r6 35r6 36r6 37r6 37r28 38r6 38r28 39r6 39r26 40r6 40r26
+. 44r5 49r20 52r32 107r7 113r10 122r10 140r10 149r10 161r10 165r10 170r10
+. 23|115e13
+X 24 microbit-accelerometer.ads
+34K18*Accelerometer 22|36w15 92r15 24|44e27
+36V13*AccelDataRaw{21|60R12} 22|92s29
+X 25 microbit-buttons.ads
+32K18*Buttons 22|38w15 38r37 161r19 165r19 170r19 25|53e21
+34n26*Pressed{34E9} 22|161r46 165r46 170r42
+35n23*Button_A{35E9} 22|161r34
+35n33*Button_B{35E9} 22|165r34
+35n43*Logo{35E9} 22|170r34
+37V13*State{34E9} 22|161s27 165s27 170s27
+X 26 microbit-console.ads
+32K18*Console 22|37w15 37r37 26|49e21
+X 27 microbit-displayrt.ads
+32K18*DisplayRT 22|34w15 35r15 107r16 113r19 122r19 131r10 140r19 149r19
+. 27|74e23
+42U14*Clear 22|107s26
+X 28 microbit-displayrt-symbols.ads
+35K28*Symbols 22|35w25 113r29 122r29 131r20 140r29 149r29 28|47e31
+37U14*Left_Arrow 22|113s37
+38U14*Right_Arrow 22|122s37
+39U14*Up_Arrow 22|131s28
+40U14*Down_Arrow 22|140s37
+45U14*Heart 22|149s37
+X 30 microbit-music.ads
+35K18*Music 22|39w15 39r35 49r29 52r41 30|148e19
+37I9*Pitch<integer>
+44A9*Melody(39R9)<integer> 22|49r35 52r47
+57i4*Rest{37I9} 22|56r5
+90i4*G3{37I9} 22|51r6 54r5 58r5
+92i4*A3{37I9} 22|57r5
+94i4*B3{37I9} 22|55r5
+95i4*C4{37I9} 22|50r6 53r6
+X 31 microbit-radio.ads
+56K18*Radio 22|40w15 40r35 61r13 70r4 76r4 174r7 31|106e19
+67R12*RadioData{35|181R9} 22|61r19
+69U14*Setup 22|70s10
+69i21 RadioFrequency{35|74I9} 22|70r16
+70m25 Length{15|53M9} 22|71r16
+71m25 Version{15|53M9} 22|72r16
+72m25 Group{15|53M9} 22|73r16
+73m25 Protocol{15|53M9} 22|74r16
+75U14*StartReceiving 22|76s10
+87U14*Transmit 22|174s13
+X 35 nrf-radio.ads
+74I9*Radio_Frequency_MHz<short_integer>
+178A9*Payload_Data(15|53M9)<15|53M9>
+182m7*Length{15|53M9} 22|65m11 71r33
+183m7*Version{15|53M9} 22|66m11 72r34
+184m7*Group{15|53M9} 22|67m11 73r32
+185m7*Protocol{15|53M9} 22|68m11 74r35
+186a7*Payload{178A9} 22|94m14 95m14 96m14 97m14 98m14 99m14 115m17 116m17
+. 117m17 118m17 119m17 124m17 125m17 126m17 127m17 128m17 133m17 134m17 135m17
+. 136m17 137m17 142m17 143m17 144m17 145m17 146m17 151m17 152m17 153m17 154m17
+. 155m17 159m14 162m17 166m17 166r39 171m18 171r40
+X 57 s-bbtime.ads
+46M9*Time
+81I9*Time_Span<long_long_integer>
+X 60 s-interr.ads
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 68 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 76 s-taskin.ads
+398V13*Get_Sec_Stack{68|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 79 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+

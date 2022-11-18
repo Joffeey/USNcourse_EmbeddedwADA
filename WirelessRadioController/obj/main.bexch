@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\examples\MicroBit_v2\ravenscar\microbit-with-game-engine-unity\MicroBitV2\Wireless\WirelessRadioController\wirelessradiocontroller.gpr
+20221109073838 801a2b5d07f9b221121dd0a63e636b68
+C:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20221109073838 02c5c9fb15a8d7ea7f1d02188c03fe21
+[BOUND OBJECT FILES]
+C:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\examples\MicroBit_v2\ravenscar\microbit-with-game-engine-unity\MicroBitV2\Wireless\WirelessRadioController\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\examples\MicroBit_v2\ravenscar\microbit-with-game-engine-unity\MicroBitV2\Wireless\WirelessRadioController\obj\
+-LC:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\examples\MicroBit_v2\ravenscar\microbit-with-game-engine-unity\MicroBitV2\Wireless\WirelessRadioController\obj\
+-LC:\Users\Windows User\Documents\git-repos\Ada_Drivers_Library\boards\MicroBit_v2\obj\full_lib_Debug\
+-LC:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\
+-static
+-static-libgcc
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnarl.a
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnat.a

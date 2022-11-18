@@ -1,0 +1,290 @@
+V "GNAT Lib v2021"
+A -gnatA
+A --RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=hard
+A -mfpu=fpv4-sp-d16
+A -mcpu=cortex-m4
+A -g
+A -gnat2022
+A -g
+A -march=armv7e-m+fp
+P DB LC TF  SS ZX
+
+RN
+RV NO_DELAY
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV STATIC_PRIORITIES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV MAX_TASKS=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U controller%b		controller.adb		ad03f1c6 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W calculation%s		calculation.adb		calculation.ali  AD
+W hal%s			hal.ads			hal.ali
+W lsm303agr%s		lsm303agr.adb		lsm303agr.ali
+W microbit%s		microbit.ads		microbit.ali
+W microbit.accelerometer%s  microbit-accelerometer.adb  microbit-accelerometer.ali  AD
+W microbit.buttons%s	microbit-buttons.adb	microbit-buttons.ali  AD
+W microbit.console%s	microbit-console.adb	microbit-console.ali
+W microbit.radio%s	microbit-radio.adb	microbit-radio.ali  AD
+W nrf%s			nrf.ads			nrf.ali
+W nrf.radio%s		nrf-radio.adb		nrf-radio.ali
+Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
+Z system.img_uns%s	s-imguns.ads		s-imguns.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+U controller%s		controller.ads		8ac2a4e4 EE OO PF PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W calculation%s		calculation.adb		calculation.ali
+W hal%s			hal.ads			hal.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+T 2 2
+
+D ada.ads		20220915123208 76789da1 ada%s
+D a-except.ads		20220915123212 946f3014 ada.exceptions%s
+D a-finali.ads		20220915123212 bf4f806b ada.finalization%s
+D a-interr.ads		20220915123220 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20220915123220 543e27b6 ada.interrupts.names%s
+D a-reatim.ads		20220915123220 cfe92427 ada.real_time%s
+D a-retide.ads		20220915123220 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20220915123210 119b8fb3 ada.streams%s
+D a-string.ads		20220915123212 90ac6797 ada.strings%s
+D a-sttebu.ads		20220915123212 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220915123212 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20220915123212 9eaa38c6 ada.tags%s
+D a-taside.ads		20220915123220 00e3a3f6 ada.task_identification%s
+D a-textio.ads		20220915123208 ffc84532 ada.text_io%s
+D a-unccon.ads		20220915123208 0e9b276f ada.unchecked_conversion%s
+D calculation.ads	20221115172816 e9d45265 calculation%s
+D controller.ads	20221115172816 48543e8f controller%s
+D controller.adb	20221115172816 a52f5e5c controller%b
+D hal.ads		20220915112902 2b42c80e hal%s
+D hal-gpio.ads		20220915112902 7f0c2ffe hal.gpio%s
+D hal-i2c.ads		20220915112902 0ed73138 hal.i2c%s
+D hal-spi.ads		20220915112902 fe139819 hal.spi%s
+D hal-uart.ads		20220915112902 d58316b4 hal.uart%s
+D interfac.ads		20220915123208 edec285f interfaces%s
+D lsm303agr.ads		20221109073838 08c05d69 lsm303agr%s
+D microbit.ads		20220929121736 3b54a3e8 microbit%s
+D microbit-accelerometer.ads  20221109073838 fc78b8ce microbit.accelerometer%s
+D microbit-buttons.ads	20220915112900 d64914b0 microbit.buttons%s
+D microbit-console.ads	20220915112900 0bb00661 microbit.console%s
+D microbit-radio.ads	20221027105610 6901b417 microbit.radio%s
+D nrf.ads		20220915112900 74cf72f5 nrf%s
+D nrf-device.ads	20220915112900 9c9916c4 nrf.device%s
+D nrf-gpio.ads		20220915112900 ab6d4598 nrf.gpio%s
+D nrf-radio.ads		20221031120916 f28f290a nrf.radio%s
+D nrf-rtc.ads		20220915112900 36d88130 nrf.rtc%s
+D nrf-spi_master.ads	20220915112900 a8ff49a3 nrf.spi_master%s
+D nrf-timers.ads	20221027105610 15fa58e3 nrf.timers%s
+D nrf-twi.ads		20220915112900 4881713f nrf.twi%s
+D nrf-uart.ads		20220915112900 9fa4b8b9 nrf.uart%s
+D nrf_svd.ads		20220915112900 87ba21d7 nrf_svd%s
+D nrf_svd-rtc.ads	20220915112900 57c7ffc8 nrf_svd.rtc%s
+D nrf_svd-spi.ads	20220915112900 6e2ffb69 nrf_svd.spi%s
+D nrf_svd-timer.ads	20220915112900 ba50db1c nrf_svd.timer%s
+D nrf_svd-twi.ads	20220915112900 68301534 nrf_svd.twi%s
+D nrf_svd-uart.ads	20220915112900 83bcebc8 nrf_svd.uart%s
+D system.ads		20220915123220 ad54c63c system%s
+D s-bb.ads		20220915123208 09e072ae system.bb%s
+D s-bbbopa.ads		20220915123220 f68efaf0 system.bb.board_parameters%s
+D s-bbbosu.ads		20220915123220 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20220915123220 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20220915123220 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20220915123218 9339744a system.bb.mcu_parameters%s
+D s-bbpara.ads		20220915123220 63167d1e system.bb.parameters%s
+D s-bbthre.ads		20220915123220 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20220915123220 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20220915123220 ad086247 system.bb.time%s
+D s-finmas.ads		20220915123214 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20220915123214 4ff27390 system.finalization_root%s
+D s-imager.ads		20220915123210 500b11a9 system.image_r%s
+D s-imageu.ads		20220915123208 525c30c6 system.image_u%s
+D s-imgflt.ads		20220915123210 78689de8 system.img_flt%s
+D s-imguns.ads		20220915123208 0e4da2ac system.img_uns%s
+D s-interr.ads		20220915123220 d74bd991 system.interrupts%s
+D s-multip.ads		20220915123220 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20220915123220 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20220915123220 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220915123220 229b14dd system.os_interface%s
+D s-parame.ads		20220915123218 8e90778f system.parameters%s
+D s-pooglo.ads		20220915123214 ede33ef8 system.pool_global%s
+D s-powflt.ads		20220915123208 46f7a1b9 system.powten_flt%s
+D s-putima.ads		20220915123216 4e095881 system.put_images%s
+D s-secsta.ads		20220915123208 56a2861c system.secondary_stack%s
+D s-stalib.ads		20220915123216 472fbca8 system.standard_library%s
+D s-stoele.ads		20220915123208 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220915123208 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220915123216 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20220915123210 7bdda3fa system.stream_attributes%s
+D s-tasinf.ads		20220915123220 801abd01 system.task_info%s
+D s-taspri.ads		20220915123220 37f162b4 system.task_primitives%s
+D s-taskin.ads		20220915123220 989d56fd system.tasking%s
+D s-taprob.ads		20220915123220 c8fc0753 system.tasking.protected_objects%s
+D s-tasres.ads		20220915123220 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20220915123220 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20220915123216 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20220915123208 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20220915123216 1b7d22d2 system.wch_con%s
+D s-wchstw.ads		20220915123216 2d112c01 system.wch_stw%s
+D unchconv.ads		20220915123208 ca2f9e18 unchecked_conversion%s
+G a e
+G c b b b [b controller 17 1 none]
+G c Z s b [readdata controller__directionhandler 20 16 none]
+G c Z s b [writedirection controller__directionhandler 21 17 none]
+G c Z s b [directionhandler__readdataN controller 20 7 none]
+G c Z s b [directionhandler__readdataP controller 20 7 none]
+G c Z s b [directionhandler__writedirectionN controller 21 7 none]
+G c Z s b [directionhandler__writedirectionP controller 21 7 none]
+G c Z s s [directionhandlerTVIP controller 19 4 none]
+G c Z s b [senddataTK controller 25 9 none]
+G c Z s s [senddataTKVIP controller 25 4 none]
+G c Z s b [accelerometerTK controller 26 9 none]
+G c Z s s [accelerometerTKVIP controller 26 4 none]
+G r c none [b controller 17 1 none] [setup microbit__radio 69 14 none]
+G r c none [b controller 17 1 none] [transmit microbit__radio 87 14 none]
+G r c none [b controller 17 1 none] [state microbit__buttons 37 13 none]
+G r c none [b controller 17 1 none] [acceldata microbit__accelerometer 38 13 none]
+G r c none [b controller 17 1 none] [normalizeaxisdata calculation 10 13 none]
+G r c none [senddataTK controller 25 9 none] [setup microbit__radio 69 14 none]
+G r c none [senddataTK controller 25 9 none] [transmit microbit__radio 87 14 none]
+G r c none [accelerometerTK controller 26 9 none] [state microbit__buttons 37 13 none]
+G r c none [accelerometerTK controller 26 9 none] [acceldata microbit__accelerometer 38 13 none]
+G r c none [accelerometerTK controller 26 9 none] [normalizeaxisdata calculation 10 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 18|8r6 8r23 9r6 9r25 22r18 28r22 32r13 39r30 59r18 74r22 77r10
+. 79r33
+X 6 a-reatim.ads
+40K13*Real_Time 181e18 18|9w10 9r29 22r22 28r26 39r34 59r22 74r26 79r37
+50M9*Time<56|46M9> 18|22r32 59r32
+60I9*Time_Span<56|81I9>
+67V13*Clock{50M9}<56|134p13> 18|28s36 74s36
+71V14*"+"{50M9} 18|39s28 79s31
+127V13*Milliseconds{60I9} 18|39s44 79s47
+X 14 a-textio.ads
+36K13*Text_IO 52e16 18|8w10 8r27 32r17 77r14
+46U14*Put_Line 18|32s25 77s22
+X 16 calculation.ads
+3K9*Calculation 13e16 17|2w6 2r23 18|3w6 3r23
+5F9*NormalizedAxisData<short_float>
+6R9*NormalizedAxisDataSet 8e14 17|21r37 18|24r24 50r37
+7f7*X{5F9} 18|33r40
+7f10*Y{5F9} 18|34r40
+7f13*Z{5F9} 18|35r40
+10V13*NormalizeAxisData{6R9} 18|31s31
+X 17 controller.ads
+4K9*Controller 29l5 29e15 18|17b14 84l5 84t15
+6E9*DrivingDirection 18e30 20r32 23r14 18|45r32 73r29
+7n30*STANDBY{6E9}
+8n30*NORTH{6E9} 18|52r18
+9n30*SOUTH{6E9}
+10n30*WEST{6E9}
+11n30*EAST{6E9}
+12n30*NORTHWEST{6E9} 23r34
+13n30*NORTHEAST{6E9}
+14n30*SOUTHWEST{6E9}
+15n30*SOUTHEAST{6E9}
+16n30*ROTATECLOCKWISE{6E9}
+17n30*ROTATECOUNTERCLOCKWISE{6E9}
+19w14*DirectionHandler 18|43b19 55l8 55t24 73r50
+20V16 ReadData{6E9} 18|45b16 48l11 48t19 73s67
+21U17 WriteDirection 21>33 18|50b17 53l11 53t25
+21r33 n{16|6R9} 18|50b33
+23e7 data{6E9} 18|47r17 52r10
+25t9*SendData 18|57b14 82l8 82t16
+26t9*Accelerometer 18|20b14 41l8 41t21
+X 18 controller.adb
+21r7 data{25|56R9} 30m13 31r49
+22m7 time_now{6|50M9} 28m10 39r19
+23e7 button{28|35E9}
+24r7 normalizedData{16|6R9} 31m13 33r25 34r25 35r25
+58r7 dataToSend{30|67R12} 62m7 63m7 64m7 65m7 68r29 69r30 70r28 71r31 75m10
+. 77r57 78r25
+59m7 time_now{6|50M9} 74m10 79r22
+60m7 direction{19|53M9} 73m10 75r35
+X 19 hal.ads
+34K9*HAL 17|1w6 1r15 18|14w6 14r15 19|166e8
+53M9*UInt8<24|68M9> 18|60r19 73r23 77r45
+X 20 hal-gpio.ads
+47h9*GPIO_Point
+X 21 hal-i2c.ads
+48h9*I2C_Port
+X 22 hal-spi.ads
+48h9*SPI_Port
+X 23 hal-uart.ads
+48h9*UART_Port
+X 24 interfac.ads
+68M9*Unsigned_8
+X 25 lsm303agr.ads
+36K9*LSM303AGR 18|1w6 1r21 25|184e14
+56R9*All_Axes_Data 18|21r14 25|58e14
+X 26 microbit.ads
+58K9*MicroBit 18|5r6 5r28 6r6 7r6 7r28 10r5 13r6 23r16 29r13 30r21 26|115e13
+X 27 microbit-accelerometer.ads
+34K18*Accelerometer 18|6w15 30r30 27|44e27
+38V13*AccelData{25|56R9} 18|30s44
+X 28 microbit-buttons.ads
+32K18*Buttons 18|7w15 7r37 23r25 29r22 28|53e21
+34n26*Pressed{34E9} 18|29r48
+35E9*Button_Id 18|23r33 28|35e48
+35n23*Button_A{35E9} 18|23r46 29r36
+37V13*State{34E9} 18|29s30
+X 29 microbit-console.ads
+32K18*Console 18|5w15 5r37 29|49e21
+X 30 microbit-radio.ads
+56K18*Radio 18|13w15 58r20 67r7 78r10 30|106e19
+67R12*RadioData{34|181R9} 18|58r26
+69U14*Setup 18|67s13
+69i21 RadioFrequency{34|74I9} 18|67r19
+70m25 Length{19|53M9} 18|68r19
+71m25 Version{19|53M9} 18|69r19
+72m25 Group{19|53M9} 18|70r19
+73m25 Protocol{19|53M9} 18|71r19
+87U14*Transmit 18|78s16
+X 31 nrf.ads
+34K9*nRF 18|15r6 31|43e8
+X 34 nrf-radio.ads
+34K13*Radio 18|15w10 34|262e14
+74I9*Radio_Frequency_MHz<short_integer>
+178A9*Payload_Data(19|53M9)<19|53M9>
+182m7*Length{19|53M9} 18|62m18 68r40
+183m7*Version{19|53M9} 18|63m18 69r41
+184m7*Group{19|53M9} 18|64m18 70r39
+185m7*Protocol{19|53M9} 18|65m18 71r42
+186a7*Payload{178A9} 18|75m21 77r68
+X 56 s-bbtime.ads
+46M9*Time
+81I9*Time_Span<long_long_integer>
+X 63 s-interr.ads
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 72 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 80 s-taskin.ads
+398V13*Get_Sec_Stack{72|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 83 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+

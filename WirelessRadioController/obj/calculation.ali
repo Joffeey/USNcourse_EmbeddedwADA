@@ -1,0 +1,90 @@
+V "GNAT Lib v2021"
+A -gnatA
+A --RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=hard
+A -mfpu=fpv4-sp-d16
+A -mcpu=cortex-m4
+A -g
+A -gnat2022
+A -g
+A -march=armv7e-m+fp
+P DB ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U calculation%b		calculation.adb		e7ae445a NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U calculation%s		calculation.ads		e1140f0c EE NE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W lsm303agr%s		lsm303agr.adb		lsm303agr.ali
+
+D ada.ads		20220915123208 76789da1 ada%s
+D a-except.ads		20220915123212 946f3014 ada.exceptions%s
+D a-finali.ads		20220915123212 bf4f806b ada.finalization%s
+D a-stream.ads		20220915123210 119b8fb3 ada.streams%s
+D a-string.ads		20220915123212 90ac6797 ada.strings%s
+D a-sttebu.ads		20220915123212 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220915123212 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20220915123212 9eaa38c6 ada.tags%s
+D a-textio.ads		20220915123208 ffc84532 ada.text_io%s
+D a-unccon.ads		20220915123208 0e9b276f ada.unchecked_conversion%s
+D calculation.ads	20221115172816 e9d45265 calculation%s
+D calculation.adb	20221115172816 f1b2530d calculation%b
+D hal.ads		20220915112902 2b42c80e hal%s
+D hal-i2c.ads		20220915112902 0ed73138 hal.i2c%s
+D interfac.ads		20220915123208 edec285f interfaces%s
+D lsm303agr.ads		20221109073838 08c05d69 lsm303agr%s
+D system.ads		20220915123220 ad54c63c system%s
+D s-finmas.ads		20220915123214 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20220915123214 4ff27390 system.finalization_root%s
+D s-parame.ads		20220915123218 8e90778f system.parameters%s
+D s-pooglo.ads		20220915123214 ede33ef8 system.pool_global%s
+D s-putima.ads		20220915123216 4e095881 system.put_images%s
+D s-stalib.ads		20220915123216 472fbca8 system.standard_library%s
+D s-stoele.ads		20220915123208 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220915123208 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220915123216 e9fa2dd8 system.storage_pools%s
+D s-traent.ads		20220915123216 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20220915123208 2b077493 system.unsigned_types%s
+D unchconv.ads		20220915123208 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [normalizeaxisdata calculation 10 13 none]
+G c Z s b [normalize calculation 11 13 none]
+G c Z s s [normalizedaxisdatasetIP calculation 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r23
+X 9 a-textio.ads
+36K13*Text_IO 52e16 12|1w10 1r27
+X 11 calculation.ads
+3K9*Calculation 13l5 13e16 12|3b14 28l5 28t16
+5F9*NormalizedAxisData<short_float> 7r17 11r59 12|5r58 9r20 14r21
+6R9*NormalizedAxisDataSet 8e14 10r71 12|19r71 20r17
+7f7*X{5F9} 12|22m15
+7f10*Y{5F9} 12|23m15
+7f13*Z{5F9} 12|24m15
+10V13*NormalizeAxisData{6R9} 10>32 12|19b13 26l8 26t25
+10r32 Data{16|56R9} 12|19b32 22r30 23r30 24r30
+11V13*Normalize{5F9} 11>24 12|5b13 16t7 22s20 23s20 24s20
+11i24 data{16|48I9} 12|5b23 6r33
+X 12 calculation.adb
+6f7 new_data{float} 12r10 12m32 13r13 13m36 14r41
+7f7 min_value{float} 14r52 14r76
+8f7 max_value{float} 14r64
+9f7 returnData{11|5F9} 14m7 15r14
+20r7 dataSet{11|6R9} 22m7 23m7 24m7 25r15
+X 16 lsm303agr.ads
+36K9*LSM303AGR 11|1w6 1r21 10r39 11r31 12|5r30 19r39 16|184e14
+48I9*Axis_Data<short_integer> 11|11r41 12|5r40
+56R9*All_Axes_Data 11|10r49 12|19r49 16|58e14
+57i7*X{48I9} 12|22r35
+57i10*Y{48I9} 12|23r35
+57i13*Z{48I9} 12|24r35
+
