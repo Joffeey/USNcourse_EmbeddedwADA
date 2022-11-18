@@ -36,9 +36,9 @@ D a-stuten.ads		20220915114510 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
-D controllerdrivingstates.ads  20221117150742 0b0d00c2 controllerdrivingstates%s
-D controllerdrivingstates.adb  20221117133522 69b1b2b6 controllerdrivingstates%b
-D drivingstatesfsm.ads	20221117160758 4883f507 drivingstatesfsm%s
+D controllerdrivingstates.ads  20221118092104 0b0d00c2 controllerdrivingstates%s
+D controllerdrivingstates.adb  20221118092100 69b1b2b6 controllerdrivingstates%b
+D drivingstatesfsm.ads	20221118093148 4883f507 drivingstatesfsm%s
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -50,7 +50,7 @@ D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-accelerometer.ads  20221107103608 fc78b8ce microbit.accelerometer%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
 D microbit-radio.ads	20221027103652 6901b417 microbit.radio%s
-D mymotordriver.ads	20221117161020 137dd968 mymotordriver%s
+D mymotordriver.ads	20221118094706 9eb2add3 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -104,22 +104,22 @@ G a e
 G c Z s b [controllupdatestate controllerdrivingstates 9 13 none]
 G r c none [controllupdatestate controllerdrivingstates 9 13 none] [convert lsm303agr 85 13 none]
 X 13 controllerdrivingstates.ads
-7K9*ControllerDrivingStates 11l5 11e28 14|1b14 26l5 26t28
-9V13*ControllUpdateState{15|4E9} 9>34 14|3b13 22l8 22t27
-9r34 V{26|67R12} 14|3b34 7r29 7r43 8r29 8r43 9r29 9r43
+7K9*ControllerDrivingStates 13l5 13e28 14|1b14 27l5 27t28
+9V13*ControllUpdateState{15|5E9} 9>34 14|3b13 23l8 23t27
+9r34 V{26|67R12} 14|3b34 8r29 8r43 9r29 9r43 10r29 10r43
 X 14 controllerdrivingstates.adb
-4i7 X{22|48I9} 7m7 11r10 13r13
-4i9 Y{22|48I9} 8m7 15r13 17r13
-4i11 Z{22|48I9} 9m7
-5N7 Threshold 11r14 13r18 15r17 17r18
+4i7 X{22|48I9} 8m7 12r10 14r13
+4i9 Y{22|48I9} 9m7 16r13 18r13
+4i11 Z{22|48I9} 10m7
+5N7 Threshold 12r14 14r18 16r17 18r18
 X 15 drivingstatesfsm.ads
-3K9*DrivingStatesFSM 13|5w6 5r28 15|18e21
-4E9*DrivState 13|9r56 14|3r56 15|4e76
-4n23*Stopping{4E9} 14|20r17
-4n33*DriveForward{4E9} 14|16r17
-4n47*Rleft{4E9} 14|12r17
-4n54*Rright{4E9} 14|14r17
-4n62*DriveBackward{4E9} 14|18r17
+3K9*DrivingStatesFSM 13|5w6 5r28 15|22e21
+5E9*DrivState 13|9r56 14|3r56 15|5e76
+5n23*Stopping{5E9} 14|21r17
+5n33*DriveForward{5E9} 14|17r17
+5n47*Rleft{5E9} 14|13r17
+5n54*Rright{5E9} 14|15r17
+5n62*DriveBackward{5E9} 14|19r17
 X 16 hal.ads
 34K9*HAL 13|4w6 4r15 16|166e8
 53M9*UInt8<21|68M9>
@@ -134,9 +134,9 @@ X 20 hal-uart.ads
 X 21 interfac.ads
 68M9*Unsigned_8
 X 22 lsm303agr.ads
-36K9*LSM303AGR 13|3w6 3r21 14|7r11 8r11 9r11 22|184e14
-48I9*Axis_Data<short_integer> 14|4r15 7r59
-85V13*Convert{48I9} 14|7s21 8s21 9s21
+36K9*LSM303AGR 13|3w6 3r21 14|8r11 9r11 10r11 22|184e14
+48I9*Axis_Data<short_integer> 14|4r15 8r59
+85V13*Convert{48I9} 14|8s21 9s21 10s21
 X 23 microbit.ads
 58K9*MicroBit 13|1r6 1r26 2r6 23|115e13
 X 24 microbit-accelerometer.ads
@@ -146,7 +146,7 @@ X 26 microbit-radio.ads
 67R12*RadioData{31|181R9} 13|9r38 14|3r38
 X 31 nrf-radio.ads
 178A9*Payload_Data(16|53M9)<16|53M9>
-186a7*Payload{178A9} 14|7r31 7r45 8r31 8r45 9r31 9r45
+186a7*Payload{178A9} 14|8r31 8r45 9r31 9r45 10r31 10r45
 X 56 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
 X 64 s-secsta.ads

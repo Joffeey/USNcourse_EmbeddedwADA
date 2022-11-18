@@ -99,13 +99,13 @@ D s-taprob.ads		20220915114514 c8fc0753 system.tasking.protected_objects%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
-D wirelessradio.ads	20221117150648 1fc9ebc0 wirelessradio%s
-D wirelessradio.adb	20221117150648 a0d31bbd wirelessradio%b
+D wirelessradio.ads	20221118093456 1fc9ebc0 wirelessradio%s
+D wirelessradio.adb	20221118093500 a0d31bbd wirelessradio%b
 G a e
-G c Z s b [setupradio wirelessradio 8 14 none]
-G c Z s b [enablereceiving wirelessradio 9 14 none]
-G r c none [setupradio wirelessradio 8 14 none] [setup microbit__radio 69 14 none]
-G r c none [enablereceiving wirelessradio 9 14 none] [startreceiving microbit__radio 75 14 none]
+G c Z s b [setupradio wirelessradio 11 14 none]
+G c Z s b [enablereceiving wirelessradio 12 14 none]
+G r c none [setupradio wirelessradio 11 14 none] [setup microbit__radio 69 14 none]
+G r c none [enablereceiving wirelessradio 12 14 none] [startreceiving microbit__radio 75 14 none]
 X 13 hal.ads
 34K9*HAL 166e8 72|4w6 4r15 73|4w6 4r15
 53M9*UInt8<18|68M9>
@@ -143,7 +143,7 @@ X 59 s-secsta.ads
 X 67 s-taskin.ads
 398V13*Get_Sec_Stack{59|46P9} 399i<c,__gnat_get_secondary_stack>22
 X 72 wirelessradio.ads
-6K9*WirelessRadio 11l5 11e18 73|6b14 23l5 23t18
-8U14*SetupRadio 73|8b14 15l8 15t18
-9U14*EnableReceiving 73|17b14 20l8 20t23
+9K9*WirelessRadio 14l5 14e18 73|6b14 23l5 23t18
+11U14*SetupRadio 73|8b14 15l8 15t18
+12U14*EnableReceiving 73|17b14 20l8 20t23
 

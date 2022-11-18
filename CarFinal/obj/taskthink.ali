@@ -21,7 +21,7 @@ RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U taskthink%b		taskthink.adb		38bd1a2f OO PK
+U taskthink%b		taskthink.adb		d23bc74d OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -39,7 +39,7 @@ W nrf%s			nrf.ads			nrf.ali
 W nrf.radio%s		nrf-radio.adb		nrf-radio.ali
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
-U taskthink%s		taskthink.ads		b14190c9 EE OO PK
+U taskthink%s		taskthink.ads		d6083910 EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W drivingstatesfsm%s	drivingstatesfsm.adb	drivingstatesfsm.ali
 W mybrain%s		mybrain.adb		mybrain.ali
@@ -66,8 +66,8 @@ D a-stuten.ads		20220915114510 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20220915114510 9eaa38c6 ada.tags%s
 D a-taside.ads		20220915114514 00e3a3f6 ada.task_identification%s
 D a-unccon.ads		20220915114508 0e9b276f ada.unchecked_conversion%s
-D controllerdrivingstates.ads  20221117150742 0b0d00c2 controllerdrivingstates%s
-D drivingstatesfsm.ads	20221117160758 4883f507 drivingstatesfsm%s
+D controllerdrivingstates.ads  20221118092104 0b0d00c2 controllerdrivingstates%s
+D drivingstatesfsm.ads	20221118093148 4883f507 drivingstatesfsm%s
 D hal.ads		20220915114714 2b42c80e hal%s
 D hal-gpio.ads		20220915114714 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20220915114714 0ed73138 hal.i2c%s
@@ -79,8 +79,8 @@ D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-accelerometer.ads  20221107103608 fc78b8ce microbit.accelerometer%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
 D microbit-radio.ads	20221027103652 6901b417 microbit.radio%s
-D mybrain.ads		20221117123648 718a28bf mybrain%s
-D mymotordriver.ads	20221117161020 137dd968 mymotordriver%s
+D mybrain.ads		20221118093850 718a28bf mybrain%s
+D mymotordriver.ads	20221118094706 9eb2add3 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -131,52 +131,52 @@ D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
-D taskthink.ads		20221117150608 9b359419 taskthink%s
-D taskthink.adb		20221117161538 23181a67 taskthink%b
+D taskthink.ads		20221118101710 71b3497b taskthink%s
+D taskthink.adb		20221118094954 23181a67 taskthink%b
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
-G c b b b [b taskthink 10 1 none]
+G c b b b [b taskthink 9 1 none]
 G c Z s b [thinkTK taskthink 7 9 none]
 G c Z s s [thinkTKVIP taskthink 7 4 none]
-G r p none [b taskthink 10 1 none] [getmeasurementsensor1 mybrain__brain 9 16 none]
-G r p none [b taskthink 10 1 none] [getmeasurementsensor2 mybrain__brain 10 16 none]
-G r p none [b taskthink 10 1 none] [getmeasurementsensor3 mybrain__brain 11 16 none]
-G r p none [b taskthink 10 1 none] [getradiosensor mybrain__brain 12 16 none]
-G r c none [b taskthink 10 1 none] [controllupdatestate controllerdrivingstates 9 13 none]
-G r p none [b taskthink 10 1 none] [setdirection mymotordriver__motordriver 46 17 none]
-G r p none [b taskthink 10 1 none] [updatestate drivingstatesfsm__states 12 16 none]
-G r p none [b taskthink 10 1 none] [unstuck drivingstatesfsm__states 14 17 none]
+G r p none [b taskthink 9 1 none] [getmeasurementsensor1 mybrain__brain 9 16 none]
+G r p none [b taskthink 9 1 none] [getmeasurementsensor2 mybrain__brain 10 16 none]
+G r p none [b taskthink 9 1 none] [getmeasurementsensor3 mybrain__brain 11 16 none]
+G r p none [b taskthink 9 1 none] [getradiosensor mybrain__brain 12 16 none]
+G r c none [b taskthink 9 1 none] [controllupdatestate controllerdrivingstates 9 13 none]
+G r p none [b taskthink 9 1 none] [setdirection mymotordriver__motordriver 45 17 none]
+G r p none [b taskthink 9 1 none] [updatestate drivingstatesfsm__states 14 16 none]
+G r p none [b taskthink 9 1 none] [unstuck drivingstatesfsm__states 18 17 none]
 G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor1 mybrain__brain 9 16 none]
 G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor2 mybrain__brain 10 16 none]
 G r p none [thinkTK taskthink 7 9 none] [getmeasurementsensor3 mybrain__brain 11 16 none]
 G r p none [thinkTK taskthink 7 9 none] [getradiosensor mybrain__brain 12 16 none]
 G r c none [thinkTK taskthink 7 9 none] [controllupdatestate controllerdrivingstates 9 13 none]
-G r p none [thinkTK taskthink 7 9 none] [setdirection mymotordriver__motordriver 46 17 none]
-G r p none [thinkTK taskthink 7 9 none] [updatestate drivingstatesfsm__states 12 16 none]
-G r p none [thinkTK taskthink 7 9 none] [unstuck drivingstatesfsm__states 14 17 none]
+G r p none [thinkTK taskthink 7 9 none] [setdirection mymotordriver__motordriver 45 17 none]
+G r p none [thinkTK taskthink 7 9 none] [updatestate drivingstatesfsm__states 14 16 none]
+G r p none [thinkTK taskthink 7 9 none] [unstuck drivingstatesfsm__states 18 17 none]
 X 1 ada.ads
 16K9*Ada 20e8 81|1r6 1r25
 X 6 a-reatim.ads
 40K13*Real_Time 181e18 81|1w10 1r29
-50M9*Time<55|46M9> 81|13r17
+50M9*Time<55|46M9> 81|12r17
 60I9*Time_Span<55|81I9>
-67V13*Clock{50M9}<55|134p13> 81|25s21
-71V14*"+"{50M9} 81|75s30
-127V13*Milliseconds{60I9} 81|75s32
+67V13*Clock{50M9}<55|134p13> 81|24s21
+71V14*"+"{50M9} 81|73s30
+127V13*Milliseconds{60I9} 81|73s32
 X 15 controllerdrivingstates.ads
-7K9*ControllerDrivingStates 11e28 81|6w6 40r29
-9V13*ControllUpdateState{16|4E9} 81|40s53
+7K9*ControllerDrivingStates 13e28 81|6w6 39r29
+9V13*ControllUpdateState{16|5E9} 81|39s53
 X 16 drivingstatesfsm.ads
-3K9*DrivingStatesFSM 18e21 80|3w6 3r28
-4E9*DrivState 4e76 81|18r22
-4n23*Stopping{4E9} 81|18r35 47r21 58r21
-4n33*DriveForward{4E9} 81|43r21 55r21
-4n47*Rleft{4E9} 81|44r21 56r21 62r31
-4n54*Rright{4E9} 81|45r21 57r21 62r55
-4n62*DriveBackward{4E9} 81|46r21 59r21
-6w14*States 81|52r29 69r16
-12V16 UpdateState{4E9} 81|52s36
-14U17 Unstuck 81|69s23
+3K9*DrivingStatesFSM 22e21 80|3w6 3r28
+5E9*DrivState 5e76 81|17r22
+5n23*Stopping{5E9} 81|17r35 46r21 57r21
+5n33*DriveForward{5E9} 81|42r21 54r21
+5n47*Rleft{5E9} 81|43r21 55r21 61r31
+5n54*Rright{5E9} 81|44r21 56r21 61r55
+5n62*DriveBackward{5E9} 81|45r21 58r21
+7w14*States 81|51r29 68r16
+14V16 UpdateState{5E9} 81|51s36
+18U17 Unstuck 81|68s23
 X 17 hal.ads
 34K9*HAL 166e8 81|5w6 5r15
 53M9*UInt8<22|68M9>
@@ -198,31 +198,31 @@ X 25 microbit-accelerometer.ads
 34K18*Accelerometer 44e27 81|3w15
 X 27 microbit-radio.ads
 56K18*Radio 106e19 81|2w15 2r35
-67R12*RadioData{33|181R9} 81|17r21
+67R12*RadioData{33|181R9} 81|16r21
 X 28 mybrain.ads
-5K9*MyBrain 29e12 80|2w6 2r19
-7w14*Brain 81|26r23 27r22 28r23 29r25
-9V16 GetMeasurementSensor1{integer} 81|26s29
-10V16 GetMeasurementSensor2{integer} 81|27s28
-11V16 GetMeasurementSensor3{integer} 81|28s29
-12V16 GetRadioSensor{27|67R12} 81|29s31
+5K9*MyBrain 26e12 80|2w6 2r19
+7w14*Brain 81|25r23 26r22 27r23 28r25
+9V16 GetMeasurementSensor1{integer} 81|25s29
+10V16 GetMeasurementSensor2{integer} 81|26s28
+11V16 GetMeasurementSensor3{integer} 81|27s29
+12V16 GetRadioSensor{27|67R12} 81|28s31
 X 29 mymotordriver.ads
-4K9*MyMotorDriver 52e18 80|1w6 1r25
-6n24*Forward{6E9} 81|43r63 55r63
-6n33*Stop{6E9} 81|47r59 58r59
-6n39*RotateRight{6E9} 81|45r57 57r57
-6n52*RotateLeft{6E9} 81|44r56 56r56
-6n64*Backward{6E9} 81|46r64 59r64
-40w14*MotorDriver 81|43r37 44r30 45r31 46r38 47r33 55r37 56r30 57r31 58r33
-. 59r38
-46U17 SetDirection 81|43s49 44s42 45s43 46s50 47s45 55s49 56s42 57s43 58s45
-. 59s50
+3K9*MyMotorDriver 51e18 80|1w6 1r25
+5n24*Forward{5E9} 81|42r63 54r63
+5n33*Stop{5E9} 81|46r59 57r59
+5n39*RotateRight{5E9} 81|44r57 56r57
+5n52*RotateLeft{5E9} 81|43r56 55r56
+5n64*Backward{5E9} 81|45r64 58r64
+39w14*MotorDriver 81|42r37 43r30 44r31 45r38 46r33 54r37 55r30 56r31 57r33
+. 58r38
+45U17 SetDirection 81|42s49 43s42 44s43 45s50 46s45 54s49 55s42 56s43 57s45
+. 58s50
 X 30 nrf.ads
 34K9*nRF 43e8 81|7r6 7r21
 X 33 nrf-radio.ads
 34K13*Radio 262e14 81|7w10 7r25
 178A9*Payload_Data(17|53M9)<17|53M9>
-186a7*Payload{178A9} 81|31r25 34r25
+186a7*Payload{178A9} 81|30r25 33r25
 X 55 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
@@ -235,15 +235,15 @@ X 74 s-taskin.ads
 X 77 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
 X 80 taskthink.ads
-5K9*TaskThink 9l5 9e14 81|10b14 81l5 81t14
-7t9*Think 81|12b14 78l8 78t13
+5K9*TaskThink 9l5 9e14 81|9b14 79l5 79t14
+7t9*Think 81|11b14 77l8 77t13
 X 81 taskthink.adb
-13m7 myClock{6|50M9} 25m10 75r22
-14i7 FrontSens{integer} 26m10 52r48
-15i7 LeftSens{integer} 27m10 52r59
-16i7 RightSens{integer} 28m10 52r69
-17r7 RadioSensor{27|67R12} 29m10 31r13 34r13 40r73
-18e7 CurrentState{16|4E9} 40m13 42r18 52m13 54r18 62r16 62r40
-19b7 ManualControll{boolean} 22m7 31r50 32m13 34r50 35m13 38r13
-20i7 TurnCounter{integer} 23m7 63m16 63r31 65m16 68r16
+12m7 myClock{6|50M9} 24m10 73r22
+13i7 FrontSens{integer} 25m10 51r48
+14i7 LeftSens{integer} 26m10 51r59
+15i7 RightSens{integer} 27m10 51r69
+16r7 RadioSensor{27|67R12} 28m10 30r13 33r13 39r73
+17e7 CurrentState{16|5E9} 39m13 41r18 51m13 53r18 61r16 61r40
+18b7 ManualControll{boolean} 21m7 30r50 31m13 33r50 34m13 37r13
+19i7 TurnCounter{integer} 22m7 62m16 62r31 64m16 67r16
 

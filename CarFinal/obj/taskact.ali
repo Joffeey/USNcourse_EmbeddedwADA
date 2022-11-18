@@ -20,7 +20,7 @@ RV NO_ELABORATION_CODE
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U taskact%b		taskact.adb		f2970328 OO PK
+U taskact%b		taskact.adb		b3bc2f00 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -31,7 +31,7 @@ W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.a
 Z mymotordriver%s	mymotordriver.adb	mymotordriver.ali  AD
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
-U taskact%s		taskact.ads		1d3636c2 EE OO PK
+U taskact%s		taskact.ads		4073bb82 EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W mymotordriver%s	mymotordriver.adb	mymotordriver.ali
 Z system%s		system.ads		system.ali
@@ -65,7 +65,7 @@ D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-console.ads	20220915114714 0bb00661 microbit.console%s
 D microbit-iosfortasking.ads  20221107103608 7dfd8b70 microbit.iosfortasking%s
-D mymotordriver.ads	20221117161020 137dd968 mymotordriver%s
+D mymotordriver.ads	20221118094706 9eb2add3 mymotordriver%s
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -115,8 +115,8 @@ D s-tasres.ads		20220915114514 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20220915114514 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20220915114512 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20220915114508 2b077493 system.unsigned_types%s
-D taskact.ads		20221114150734 0e4befaa taskact%s
-D taskact.adb		20221117161054 457845b4 taskact%b
+D taskact.ads		20221118101710 dec11651 taskact%s
+D taskact.adb		20221118094640 d4d99067 taskact%b
 D unchconv.ads		20220915114508 ca2f9e18 unchecked_conversion%s
 G a e
 G c b b b [b taskact 5 1 none]
@@ -125,21 +125,21 @@ G c Z s s [actTKVIP taskact 5 4 none]
 G c Z s b [setupmotors taskact 7 14 none]
 G c Z s b [drive taskact 8 14 none]
 G c Z s b [controlmotor taskact 9 14 none]
-G r p none [b taskact 5 1 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r p none [b taskact 5 1 none] [setmotorpins mymotordriver__motordriver 44 17 none]
 G r c none [b taskact 5 1 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
-G r p none [b taskact 5 1 none] [getdirection mymotordriver__motordriver 42 16 none]
-G r p none [b taskact 5 1 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r p none [b taskact 5 1 none] [getdirection mymotordriver__motordriver 41 16 none]
+G r p none [b taskact 5 1 none] [getmotorpins mymotordriver__motordriver 42 16 none]
 G r c none [b taskact 5 1 none] [set microbit__iosfortasking 22 14 none]
 G r c none [b taskact 5 1 none] [write microbit__iosfortasking 34 14 none]
-G r p none [actTK taskact 5 9 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r p none [actTK taskact 5 9 none] [setmotorpins mymotordriver__motordriver 44 17 none]
 G r c none [actTK taskact 5 9 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
-G r p none [actTK taskact 5 9 none] [getdirection mymotordriver__motordriver 42 16 none]
-G r p none [actTK taskact 5 9 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r p none [actTK taskact 5 9 none] [getdirection mymotordriver__motordriver 41 16 none]
+G r p none [actTK taskact 5 9 none] [getmotorpins mymotordriver__motordriver 42 16 none]
 G r c none [actTK taskact 5 9 none] [set microbit__iosfortasking 22 14 none]
 G r c none [actTK taskact 5 9 none] [write microbit__iosfortasking 34 14 none]
-G r p none [setupmotors taskact 7 14 none] [setmotorpins mymotordriver__motordriver 45 17 none]
+G r p none [setupmotors taskact 7 14 none] [setmotorpins mymotordriver__motordriver 44 17 none]
 G r c none [setupmotors taskact 7 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
-G r p none [drive taskact 8 14 none] [getmotorpins mymotordriver__motordriver 43 16 none]
+G r p none [drive taskact 8 14 none] [getmotorpins mymotordriver__motordriver 42 16 none]
 G r c none [drive taskact 8 14 none] [set microbit__iosfortasking 22 14 none]
 G r c none [drive taskact 8 14 none] [write microbit__iosfortasking 34 14 none]
 G r c none [controlmotor taskact 9 14 none] [set microbit__iosfortasking 22 14 none]
@@ -162,62 +162,60 @@ X 18 hal-spi.ads
 X 19 hal-uart.ads
 48h9*UART_Port
 X 21 microbit.ads
-58K9*MicroBit 115e13 75|2r6 2r28 3r6 3r34 160r10 161r10 164r10 165r10 169r10
-. 170r10 173r10 174r10 177r10 178r10
+58K9*MicroBit 115e13 75|2r6 2r28 3r6 3r34 142r10 143r10 146r10 147r10 151r10
+. 152r10 155r10 156r10 159r10 160r10
 X 22 microbit-console.ads
 32K18*Console 49e21 75|2w15 2r37
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 93e27 75|3w15 3r43 160r19 161r19 164r19 165r19 169r19
-. 170r19 173r19 174r19 177r19 178r19
+5K18*IOsForTasking 93e27 75|3w15 3r43 142r19 143r19 146r19 147r19 151r19
+. 152r19 155r19 156r19 159r19 160r19
 7I9*Pin_Id<short_short_integer>
-22U14*Set 75|160s33 161s33 164s33 165s33 169s33 170s33 173s33 174s33
-28I9*Analog_Value<short_integer> 75|54r20 55r19
-30U14*Set_Analog_Period_Us 75|47s7
-34U14*Write 75|177s33 178s33
+22U14*Set 75|142s33 143s33 146s33 147s33 151s33 152s33 155s33 156s33
+28I9*Analog_Value<short_integer> 75|52r20 53r19
+30U14*Set_Analog_Period_Us 75|45s7
+34U14*Write 75|159s33 160s33
 X 24 mymotordriver.ads
-4K9*MyMotorDriver 52e18 74|1w6 1r25
-6E9*Directions 6e84 74|8r33 75|9r26 52r32
-6n24*Forward{6E9} 75|58r15
-6n33*Stop{6E9} 75|73r15
-6n39*RotateRight{6E9} 75|88r15
-6n52*RotateLeft{6E9} 75|103r15
-6n64*Backward{6E9} 75|118r15
-6n74*TurnRight{6E9} 75|133r15
-8R9*DriveInstruction 22e14 74|9r41 75|53r21 155r41
-9i12*LeftFrontSpeed{23|28I9} 75|59m25 74m25 89m25 104m25 119m25 134m25 177r76
-10b12*LeftFrontPin1{boolean} 75|60m25 61r58 75m25 90m25 105m25 120m25 121r58
-. 135m25 136r58 160r72
-11b12*LeftFrontPin2{boolean} 75|61m25 76m25 91m25 106m25 121m25 136m25 161r72
-12i12*LeftBackSpeed{23|28I9} 75|62m25 77m25 92m25 107m25 122m25 137m25
-13b12*LeftBackPin1{boolean} 75|63m25 64r57 78m25 93m25 108m25 123m25 124r57
-. 138m25 139r57 164r71
-14b12*LeftBackPin2{boolean} 75|64m25 79m25 94m25 109m25 124m25 139m25 165r71
-16i12*RightFrontSpeed{23|28I9} 75|66m25 81m25 96m25 111m25 126m25 141m25
-. 178r77
-17b12*RightFrontPin1{boolean} 75|67m25 68r59 82m25 97m25 112m25 127m25 128r59
-. 142m25 143r59 169r73
-18b12*RightFrontPin2{boolean} 75|68m25 83m25 98m25 113m25 128m25 143m25 170r73
-19i12*RightBackSpeed{23|28I9} 75|69m25 84m25 99m25 114m25 129m25 144m25
-20b12*RightBackPin1{boolean} 75|70m25 71r58 85m25 100m25 115m25 130m25 131r58
-. 145m25 146r58 173r72
-21b12*RightBackPin2{boolean} 75|71m25 86m25 101m25 116m25 131m25 146m25 174r72
-24R9*MotorControllerPins 38e14 74|9r66 75|27r14 155r65
-25i12*LeftFrontSpeedEnA{23|7I9} 75|30m12 177r45
-26i12*LeftFrontPin1In1{23|7I9} 75|31m12 160r42
-27i12*LeftFrontPin2In2{23|7I9} 75|32m12 161r42
-28i12*LeftBackSpeedEnB{23|7I9} 75|33m12
-29i12*LeftBackPin1In3{23|7I9} 75|34m12 164r42
-30i12*LeftBackPin2In4{23|7I9} 75|35m12 165r42
-32i12*RightFrontSpeedEnA{23|7I9} 75|37m12 178r45
-33i12*RightFrontPin1In1{23|7I9} 75|38m12 169r42
-34i12*RightFrontPin2In2{23|7I9} 75|39m12 170r42
-35i12*RightBackSpeedEnB{23|7I9} 75|40m12
-36i12*RightBackPin1In3{23|7I9} 75|41m12 173r42
-37i12*RightBackPin2In4{23|7I9} 75|42m12 174r42
-40w14*MotorDriver 75|16r30 44r7 150r35
-42V16 GetDirection{6E9} 75|16s42
-43V16 GetMotorPins{24R9} 75|150s47
-45U17 SetMotorPins 75|44s19
+3K9*MyMotorDriver 51e18 74|1w6 1r25
+5E9*Directions 5e73 74|8r33 75|9r26 50r32
+5n24*Forward{5E9} 75|56r15
+5n33*Stop{5E9} 75|71r15
+5n39*RotateRight{5E9} 75|86r15
+5n52*RotateLeft{5E9} 75|101r15
+5n64*Backward{5E9} 75|116r15
+7R9*DriveInstruction 21e14 74|9r41 75|51r21 137r41
+8i12*LeftFrontSpeed{23|28I9} 75|57m25 72m25 87m25 102m25 117m25 159r76
+9b12*LeftFrontPin1{boolean} 75|58m25 59r58 73m25 88m25 103m25 118m25 119r58
+. 142r72
+10b12*LeftFrontPin2{boolean} 75|59m25 74m25 89m25 104m25 119m25 143r72
+11i12*LeftBackSpeed{23|28I9} 75|60m25 75m25 90m25 105m25 120m25
+12b12*LeftBackPin1{boolean} 75|61m25 62r57 76m25 91m25 106m25 121m25 122r57
+. 146r71
+13b12*LeftBackPin2{boolean} 75|62m25 77m25 92m25 107m25 122m25 147r71
+15i12*RightFrontSpeed{23|28I9} 75|64m25 79m25 94m25 109m25 124m25 160r77
+16b12*RightFrontPin1{boolean} 75|65m25 66r59 80m25 95m25 110m25 125m25 126r59
+. 151r73
+17b12*RightFrontPin2{boolean} 75|66m25 81m25 96m25 111m25 126m25 152r73
+18i12*RightBackSpeed{23|28I9} 75|67m25 82m25 97m25 112m25 127m25
+19b12*RightBackPin1{boolean} 75|68m25 69r58 83m25 98m25 113m25 128m25 129r58
+. 155r72
+20b12*RightBackPin2{boolean} 75|69m25 84m25 99m25 114m25 129m25 156r72
+23R9*MotorControllerPins 37e14 74|9r66 75|26r14 137r65
+24i12*LeftFrontSpeedEnA{23|7I9} 75|29m12 159r45
+25i12*LeftFrontPin1In1{23|7I9} 75|30m12 142r42
+26i12*LeftFrontPin2In2{23|7I9} 75|31m12 143r42
+27i12*LeftBackSpeedEnB{23|7I9} 75|32m12
+28i12*LeftBackPin1In3{23|7I9} 75|33m12 146r42
+29i12*LeftBackPin2In4{23|7I9} 75|34m12 147r42
+31i12*RightFrontSpeedEnA{23|7I9} 75|36m12 160r45
+32i12*RightFrontPin1In1{23|7I9} 75|37m12 151r42
+33i12*RightFrontPin2In2{23|7I9} 75|38m12 152r42
+34i12*RightBackSpeedEnB{23|7I9} 75|39m12
+35i12*RightBackPin1In3{23|7I9} 75|40m12 155r42
+36i12*RightBackPin2In4{23|7I9} 75|41m12 156r42
+39w14*MotorDriver 75|16r30 43r7 133r35
+41V16 GetDirection{5E9} 75|16s42
+42V16 GetMotorPins{23R9} 75|133s47
+44U17 SetMotorPins 75|43s19
 X 49 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
@@ -230,31 +228,28 @@ X 68 s-taskin.ads
 X 71 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
 X 74 taskact.ads
-3K9*TaskAct 11l5 11e12 75|5b14 186l5 186t12
-5t9*Act 75|7b14 24l8 24t11
-7U14*SetupMotors 75|12s7 26b14 50t7
-8U14*Drive 8>21 75|18s10 52b14 153l11 153t16
-8e21 direction{24|6E9} 75|52b20 57r12
-9U14*ControlMotor 9>27 9>59 75|150s9 155b14 184l8 184t20
-9r27 Instruction{24|8R9} 75|155b27 160r60 161r60 164r59 165r59 169r61 170r61
-. 173r60 174r60 177r64 178r65
-9r59 Pins{24|24R9} 75|155b59 160r37 161r37 164r37 165r37 169r37 170r37 173r37
-. 174r37 177r40 178r40
+3K9*TaskAct 11l5 11e12 75|5b14 164l5 164t12
+5t9*Act 75|7b14 23l8 23t11
+7U14*SetupMotors 75|12s7 25b14 48t7
+8U14*Drive 8>21 75|18s10 50b14 135l11 135t16
+8e21 direction{24|5E9} 75|50b20 55r12
+9U14*ControlMotor 9>27 9>59 75|133s9 137b14 162l8 162t20
+9r27 Instruction{24|7R9} 75|137b27 142r60 143r60 146r59 147r59 151r61 152r61
+. 155r60 156r60 159r64 160r65
+9r59 Pins{24|23R9} 75|137b59 142r37 143r37 146r37 147r37 151r37 152r37 155r37
+. 156r37 159r40 160r40
 X 75 taskact.adb
 8m7 myClock{6|50M9} 15m10 20r22
-9e7 CurrentDirection{24|6E9} 16m10 18r16
-27r7 Pins{24|24R9} 30m7 31m7 32m7 33m7 34m7 35m7 37m7 38m7 39m7 40m7 41m7
-. 42m7 44r32
-53r7 Instruction{24|8R9} 59m13 60m13 61m13 61r46 62m13 63m13 64m13 64r45
-. 66m13 67m13 68m13 68r47 69m13 70m13 71m13 71r46 74m13 75m13 76m13 77m13
-. 78m13 79m13 81m13 82m13 83m13 84m13 85m13 86m13 89m13 90m13 91m13 92m13
-. 93m13 94m13 96m13 97m13 98m13 99m13 100m13 101m13 104m13 105m13 106m13
-. 107m13 108m13 109m13 111m13 112m13 113m13 114m13 115m13 116m13 119m13 120m13
-. 121m13 121r46 122m13 123m13 124m13 124r45 126m13 127m13 128m13 128r47 129m13
-. 130m13 131m13 131r46 134m13 135m13 136m13 136r46 137m13 138m13 139m13 139r45
-. 141m13 142m13 143m13 143r47 144m13 145m13 146m13 146r46 150r22
-54i7 RightSpeed{23|28I9} 66r44 69r43 96r44 99r43 111r44 114r43 126r44 129r43
-. 141r44 144r43
-55i7 LeftSpeed{23|28I9} 59r43 62r42 89r43 92r42 104r43 107r42 119r43 122r42
-. 134r43 137r42
+9e7 CurrentDirection{24|5E9} 16m10 18r16
+26r7 Pins{24|23R9} 29m7 30m7 31m7 32m7 33m7 34m7 36m7 37m7 38m7 39m7 40m7
+. 41m7 43r32
+51r7 Instruction{24|7R9} 57m13 58m13 59m13 59r46 60m13 61m13 62m13 62r45
+. 64m13 65m13 66m13 66r47 67m13 68m13 69m13 69r46 72m13 73m13 74m13 75m13
+. 76m13 77m13 79m13 80m13 81m13 82m13 83m13 84m13 87m13 88m13 89m13 90m13
+. 91m13 92m13 94m13 95m13 96m13 97m13 98m13 99m13 102m13 103m13 104m13 105m13
+. 106m13 107m13 109m13 110m13 111m13 112m13 113m13 114m13 117m13 118m13 119m13
+. 119r46 120m13 121m13 122m13 122r45 124m13 125m13 126m13 126r47 127m13 128m13
+. 129m13 129r46 133r22
+52i7 RightSpeed{23|28I9} 64r44 67r43 94r44 97r43 109r44 112r43 124r44 127r43
+53i7 LeftSpeed{23|28I9} 57r43 60r42 87r43 90r42 102r43 105r42 117r43 120r42
 

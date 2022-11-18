@@ -4,6 +4,6 @@ with DrivingStatesFSM; use DrivingStatesFSM;
 
 package TaskThink is
 
-   task Think with Priority=> 1;
+   task Think with Priority=> 2;
   
 end TaskThink;

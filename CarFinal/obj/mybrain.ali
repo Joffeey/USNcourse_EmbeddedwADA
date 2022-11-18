@@ -51,8 +51,8 @@ D hal-uart.ads		20220915114714 d58316b4 hal.uart%s
 D interfac.ads		20220915114508 edec285f interfaces%s
 D microbit.ads		20221006121912 3b54a3e8 microbit%s
 D microbit-radio.ads	20221027103652 6901b417 microbit.radio%s
-D mybrain.ads		20221117123648 718a28bf mybrain%s
-D mybrain.adb		20221117124022 69569d46 mybrain%b
+D mybrain.ads		20221118093850 718a28bf mybrain%s
+D mybrain.adb		20221118093944 69569d46 mybrain%b
 D nrf.ads		20220915114712 74cf72f5 nrf%s
 D nrf-device.ads	20220915114712 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20220915114712 ab6d4598 nrf.gpio%s
@@ -108,10 +108,10 @@ G c Z s b [getmeasurementsensor1 mybrain__brain 9 16 none]
 G c Z s b [getmeasurementsensor2 mybrain__brain 10 16 none]
 G c Z s b [getmeasurementsensor3 mybrain__brain 11 16 none]
 G c Z s b [getradiosensor mybrain__brain 12 16 none]
-G c Z s b [setmeasurementsensor1 mybrain__brain 15 17 none]
-G c Z s b [setmeasurementsensor2 mybrain__brain 16 17 none]
-G c Z s b [setmeasurementsensor3 mybrain__brain 17 17 none]
-G c Z s b [setradiosensor mybrain__brain 18 17 none]
+G c Z s b [setmeasurementsensor1 mybrain__brain 14 17 none]
+G c Z s b [setmeasurementsensor2 mybrain__brain 15 17 none]
+G c Z s b [setmeasurementsensor3 mybrain__brain 16 17 none]
+G c Z s b [setradiosensor mybrain__brain 17 17 none]
 G c Z s b [brain__getmeasurementsensor1N mybrain 9 7 none]
 G c Z s b [brain__getmeasurementsensor1P mybrain 9 7 none]
 G c Z s b [brain__getmeasurementsensor2N mybrain 10 7 none]
@@ -120,14 +120,14 @@ G c Z s b [brain__getmeasurementsensor3N mybrain 11 7 none]
 G c Z s b [brain__getmeasurementsensor3P mybrain 11 7 none]
 G c Z s b [brain__getradiosensorN mybrain 12 7 none]
 G c Z s b [brain__getradiosensorP mybrain 12 7 none]
-G c Z s b [brain__setmeasurementsensor1N mybrain 15 7 none]
-G c Z s b [brain__setmeasurementsensor1P mybrain 15 7 none]
-G c Z s b [brain__setmeasurementsensor2N mybrain 16 7 none]
-G c Z s b [brain__setmeasurementsensor2P mybrain 16 7 none]
-G c Z s b [brain__setmeasurementsensor3N mybrain 17 7 none]
-G c Z s b [brain__setmeasurementsensor3P mybrain 17 7 none]
-G c Z s b [brain__setradiosensorN mybrain 18 7 none]
-G c Z s b [brain__setradiosensorP mybrain 18 7 none]
+G c Z s b [brain__setmeasurementsensor1N mybrain 14 7 none]
+G c Z s b [brain__setmeasurementsensor1P mybrain 14 7 none]
+G c Z s b [brain__setmeasurementsensor2N mybrain 15 7 none]
+G c Z s b [brain__setmeasurementsensor2P mybrain 15 7 none]
+G c Z s b [brain__setmeasurementsensor3N mybrain 16 7 none]
+G c Z s b [brain__setmeasurementsensor3P mybrain 16 7 none]
+G c Z s b [brain__setradiosensorN mybrain 17 7 none]
+G c Z s b [brain__setradiosensorP mybrain 17 7 none]
 G c Z s s [brainTVIP mybrain 7 4 none]
 G r s framebuffer [s mybrain 5 1 none] [framebufferIP nrf__radio 181 9 none]
 G r s framebuffer [brainTVIP mybrain 7 4 none] [framebufferIP nrf__radio 181 9 none]
@@ -145,26 +145,26 @@ X 19 microbit.ads
 58K9*MicroBit 115e13 21|1r6 1r26 22|1r6 1r26
 X 20 microbit-radio.ads
 56K18*Radio 106e19 21|1w15 1r35 22|1w15 1r35
-67R12*RadioData{26|181R9} 21|12r38 18r37 25r24 22|42r37 47r38
+67R12*RadioData{26|181R9} 21|12r38 17r37 23r24 22|38r37 43r38
 X 21 mybrain.ads
-5K9*MyBrain 29l5 29e12 22|3b14 55l5 55t12
-7w14*Brain 22|6b20 53l8 53t13
-9V16 GetMeasurementSensor1{integer} 22|14b16 17l11 17t32
-10V16 GetMeasurementSensor2{integer} 22|26b16 29l11 29t32
-11V16 GetMeasurementSensor3{integer} 22|37b16 40l11 40t32
-12V16 GetRadioSensor{20|67R12} 22|47b16 50l11 50t25
-15U17 SetMeasurementSensor1 15>40 22|8b17 11l11 11t32
-15i40 V{integer} 22|8b40 10r32
-16U17 SetMeasurementSensor2 16>40 22|20b17 23l11 23t32
-16i40 V{integer} 22|20b40 22r32
-17U17 SetMeasurementSensor3 17>40 22|32b17 35l11 35t32
-17i40 V{integer} 22|32b40 34r32
-18U17 SetRadioSensor 18>33 22|42b17 45l11 45t25
-18r33 V{20|67R12} 22|42b33 44r25
-22i10 MeasurementSensor1{integer} 22|10r10 16r17
-23i10 MeasurementSensor2{integer} 22|22r10 28r17
-24i10 MeasurementSensor3{integer} 22|34r10 39r17
-25r10 RadioSignal{20|67R12} 22|44r10 49r17
+5K9*MyBrain 26l5 26e12 22|3b14 50l5 50t12
+7w14*Brain 22|6b20 48l8 48t13
+9V16 GetMeasurementSensor1{integer} 22|13b16 16l11 16t32
+10V16 GetMeasurementSensor2{integer} 22|23b16 26l11 26t32
+11V16 GetMeasurementSensor3{integer} 22|33b16 36l11 36t32
+12V16 GetRadioSensor{20|67R12} 22|43b16 46l11 46t25
+14U17 SetMeasurementSensor1 14>40 22|8b17 11l11 11t32
+14i40 V{integer} 22|8b40 10r32
+15U17 SetMeasurementSensor2 15>40 22|18b17 21l11 21t32
+15i40 V{integer} 22|18b40 20r32
+16U17 SetMeasurementSensor3 16>40 22|28b17 31l11 31t32
+16i40 V{integer} 22|28b40 30r32
+17U17 SetRadioSensor 17>33 22|38b17 41l11 41t25
+17r33 V{20|67R12} 22|38b33 40r25
+20i10 MeasurementSensor1{integer} 22|10r10 15r17
+21i10 MeasurementSensor2{integer} 22|20r10 25r17
+22i10 MeasurementSensor3{integer} 22|30r10 35r17
+23r10 RadioSignal{20|67R12} 22|40r10 45r17
 X 23 nrf.ads
 34K9*nRF 21|3r6 23|43e8
 X 26 nrf-radio.ads
